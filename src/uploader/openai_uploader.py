@@ -3,7 +3,7 @@ import sys
 from openai import OpenAI
 from src import config
 
-def upload_articles():
+def upload_articles(file_paths=None):
     """Upload saved markdown articles to the OpenAI Vector Store."""
     if not config.OPENAI_API_KEY:
         print("Failed to initialize OpenAI client:")
@@ -12,19 +12,20 @@ def upload_articles():
 
     client = OpenAI(api_key=config.OPENAI_API_KEY)
 
-    if not config.ARTICLES_DIR.exists():
-        print(f"Error: Directory '{config.ARTICLES_DIR}' not found. Please run 'fetch' command first.")
-        sys.exit(1)
+    if file_paths is None:
+        if not config.ARTICLES_DIR.exists():
+            print(f"Error: Directory '{config.ARTICLES_DIR}' not found. Please run 'fetch' command first.")
+            sys.exit(1)
 
-    # 1. Collect all markdown file paths
-    file_paths = []
-    for filepath in config.ARTICLES_DIR.iterdir():
-        if filepath.suffix == ".md":
-            file_paths.append(filepath)
+        # 1. Collect all markdown file paths
+        file_paths = []
+        for filepath in config.ARTICLES_DIR.iterdir():
+            if filepath.suffix == ".md":
+                file_paths.append(filepath)
             
     if not file_paths:
         print("No markdown files found to upload.")
-        sys.exit(1)
+        return
 
     print(f"Found {len(file_paths)} markdown files. Preparing to upload to Vector Store...")
 

@@ -17,12 +17,18 @@ def main():
     # Upload Command
     subparsers.add_parser("upload", help="Upload local markdown articles to OpenAI Vector Store")
 
+    # Sync Command
+    subparsers.add_parser("sync", help="Fetch articles and immediately upload them to OpenAI")
+
     args = parser.parse_args()
 
     if args.command == "fetch":
-        fetch_all_articles()
+        updated_files = fetch_all_articles()
     elif args.command == "upload":
         upload_articles()
+    elif args.command == "sync":
+        saved_files = fetch_all_articles()
+        upload_articles(saved_files)
     else:
         parser.print_help()
         sys.exit(1)

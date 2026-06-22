@@ -93,10 +93,15 @@ def fetch_all_articles():
 
     url: str | None = f"{config.BASE_URL}?per_page={config.PER_PAGE}"
     page = 0
-    total_saved = 0
+    total_processed = 0
+    total_added = 0
+    total_updated = 0
+    total_skipped = 0
+    total_errors = 0
+    saved_files = []
 
-    print(f"📥 Fetching articles from Zendesk Help Center…")
-    print(f"📂 Saving to: {config.ARTICLES_DIR}\n")
+    print(f"Fetching articles from Zendesk Help Center…")
+    print(f"Saving to: {config.ARTICLES_DIR}\n")
 
     while url:
         page += 1
@@ -109,18 +114,53 @@ def fetch_all_articles():
             break
 
         for article in articles:
-            filename = make_filename(article)
-            filepath = config.ARTICLES_DIR / filename
+            total_processed += 1
+            try:
+                filename = make_filename(article)
+                filepath = config.ARTICLES_DIR / filename
+                
+                status = "added"
+                if filepath.exists():
+                    existing_content = filepath.read_text(encoding="utf-8")
+                    match = re.search(r"^updated_at:\s*(.*)$", existing_content, re.MULTILINE)
+                    if match:
+                        existing_updated_at = match.group(1).strip()
+                        new_updated_at = str(article.get('updated_at', '')).strip()
+                        if existing_updated_at == new_updated_at:
+                            status = "skipped"
+                        else:
+                            status = "updated"
+                    else:
+                        status = "updated"
 
-            md_content = article_to_markdown(article)
-            filepath.write_text(md_content, encoding="utf-8")
+                if status in ("added", "updated"):
+                    md_content = article_to_markdown(article)
+                    filepath.write_text(md_content, encoding="utf-8")
+                    saved_files.append(filepath)
 
-            total_saved += 1
-            title = article.get("title", "")[:60]
-            print(f"  ✅ [{total_saved}] {filename}  —  {title}")
+                if status == "added":
+                    total_added += 1
+                    print(f"  [Added] {filename}")
+                elif status == "updated":
+                    total_updated += 1
+                    print(f"  [Updated] {filename}")
+                elif status == "skipped":
+                    total_skipped += 1
+                    print(f"  [Skipped] {filename}")
+
+            except Exception as e:
+                total_errors += 1
+                print(f"  [Error] {article.get('id', 'Unknown')} - {str(e)}")
 
         url = data.get("next_page")
         if url:
             time.sleep(config.RATE_LIMIT_PAUSE)
 
-    print(f"\n🎉 Done! Saved {total_saved} articles to {config.ARTICLES_DIR}")
+    print(f"\nDone! Processed {total_processed} articles.")
+    print(f"   Added: {total_added}")
+    print(f"   Updated: {total_updated}")
+    print(f"   Skipped: {total_skipped}")
+    if total_errors > 0:
+        print(f"   Errors: {total_errors}")
+    print(f"   Saved to {config.ARTICLES_DIR}")
+    return saved_files
