@@ -1,0 +1,3 @@
+"""
+Bot Stimulator source package.
+"""
