@@ -4,6 +4,8 @@ Main entry point for Bot Stimulator CLI
 """
 import argparse
 import sys
+import os
+from crontab import CronTab
 from src.scrapper import create_fetcher
 from src.uploader import create_uploader
 
@@ -20,6 +22,9 @@ def main():
     # Sync Command
     subparsers.add_parser("sync", help="Fetch articles and immediately upload them to OpenAI")
 
+    # Cron Command
+    subparsers.add_parser("cron", help="Schedule a daily cron job to run the sync task")
+
     args = parser.parse_args()
 
     if args.command == "fetch":
@@ -34,6 +39,19 @@ def main():
         
         uploader = create_uploader("openai")
         uploader.upload(saved_files)
+    elif args.command == "cron":
+        cron = CronTab(user=True)
+        command_to_run = f"{sys.executable} {os.path.abspath(__file__)} sync"
+        # Check if job already exists to avoid duplicates
+        existing_jobs = list(cron.find_comment('bot-stimulator-sync'))
+        if existing_jobs:
+            print("Cron job 'bot-stimulator-sync' already exists. Updating it.")
+            cron.remove_all(comment='bot-stimulator-sync')
+        
+        job = cron.new(command=command_to_run, comment='bot-stimulator-sync')
+        job.setall('0 0 * * *')  # Run once a day at midnight
+        cron.write()
+        print(f"Cron job scheduled to run daily at midnight: {command_to_run}")
     else:
         parser.print_help()
         sys.exit(1)
