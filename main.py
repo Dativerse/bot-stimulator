@@ -4,8 +4,8 @@ Main entry point for Bot Stimulator CLI
 """
 import argparse
 import sys
-from src.scrapper.fetcher import fetch_all_articles
-from src.uploader.openai_uploader import upload_articles
+from src.scrapper import create_fetcher
+from src.uploader import create_uploader
 
 def main():
     parser = argparse.ArgumentParser(description="Bot Stimulator CLI")
@@ -23,12 +23,17 @@ def main():
     args = parser.parse_args()
 
     if args.command == "fetch":
-        updated_files = fetch_all_articles()
+        fetcher = create_fetcher("optic")
+        fetcher.fetch_or_update()
     elif args.command == "upload":
-        upload_articles()
+        uploader = create_uploader("openai")
+        uploader.upload()
     elif args.command == "sync":
-        saved_files = fetch_all_articles()
-        upload_articles(saved_files)
+        fetcher = create_fetcher("optic")
+        saved_files = fetcher.fetch_or_update()
+        
+        uploader = create_uploader("openai")
+        uploader.upload(saved_files)
     else:
         parser.print_help()
         sys.exit(1)
