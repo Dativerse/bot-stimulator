@@ -1,22 +1,33 @@
-FROM python:3.11-slim
+# syntax=docker/dockerfile:1.7
 
-# Prevent Python from writing pyc files to disc
-ENV PYTHONDONTWRITEBYTECODE 1
-# Prevent Python from buffering stdout and stderr
-ENV PYTHONUNBUFFERED 1
+FROM python:3.14.6-slim AS base
+
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    PIP_NO_CACHE_DIR=1 \
+    PIP_DISABLE_PIP_VERSION_CHECK=1
 
 WORKDIR /app
 
-# Install system dependencies if any are needed (e.g., cron)
-# RUN apt-get update && apt-get install -y cron && rm -rf /var/lib/apt/lists/*
+# Install system dependencies only if needed
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    gcc \
+    build-essential \
+    && rm -rf /var/lib/apt/lists/*
 
-# Copy and install Python dependencies
+# Install Python dependencies first for better Docker layer caching
 COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the rest of the application code
+RUN pip install --upgrade pip \
+    && pip install -r requirements.txt
+
+# Copy source code after dependencies
 COPY . .
 
-# Set the default command to show help, users can override it to run `sync`, `fetch`, or `upload`
-ENTRYPOINT ["python3", "main.py"]
-CMD ["--help"]
+# Create non-root user
+RUN useradd -m appuser
+USER appuser
+
+EXPOSE 8000
+
+CMD ["python", "main.py"]

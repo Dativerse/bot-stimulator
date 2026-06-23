@@ -3,8 +3,6 @@
 Main entry point for Bot Stimulator CLI
 """
 import argparse
-import sys
-import os
 from src.scrapper import create_fetcher
 from src.uploader import create_uploader
 from src.scheduler import start_cron_job
