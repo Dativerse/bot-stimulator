@@ -20,3 +20,6 @@ RETRY_DELAY = 5  # seconds
 # OpenAI Configuration
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 VECTOR_STORE_NAME = "Zendesk Help Articles"
+
+# Scheduler Configuration
+CRON_SCHEDULE = os.getenv("CRON_SCHEDULE", "0 0 * * *")

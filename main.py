@@ -5,10 +5,20 @@ Main entry point for Bot Stimulator CLI
 import argparse
 import sys
 import os
-from crontab import CronTab
-from dotenv import load_dotenv
 from src.scrapper import create_fetcher
 from src.uploader import create_uploader
+from src.scheduler import start_cron_job
+from src.config import CRON_SCHEDULE
+
+def run_sync():
+    """Fetch articles and immediately upload them to OpenAI."""
+    print("Starting sync task...")
+    fetcher = create_fetcher("optic")
+    saved_files = fetcher.fetch_or_update()
+    
+    uploader = create_uploader("openai")
+    uploader.upload(saved_files)
+    print("Sync task completed.")
 
 def main():
     parser = argparse.ArgumentParser(description="Bot Stimulator CLI")
@@ -35,29 +45,10 @@ def main():
         uploader = create_uploader("openai")
         uploader.upload()
     elif args.command == "sync":
-        fetcher = create_fetcher("optic")
-        saved_files = fetcher.fetch_or_update()
-        
-        uploader = create_uploader("openai")
-        uploader.upload(saved_files)
-    elif args.command == "cron":
-        load_dotenv()
-        cron_schedule = os.environ.get("CRON_SCHEDULE", "0 0 * * *")
-        cron = CronTab(user=True)
-        command_to_run = f"{sys.executable} {os.path.abspath(__file__)} sync"
-        # Check if job already exists to avoid duplicates
-        existing_jobs = list(cron.find_comment('bot-stimulator-sync'))
-        if existing_jobs:
-            print("Cron job 'bot-stimulator-sync' already exists. Updating it.")
-            cron.remove_all(comment='bot-stimulator-sync')
-        
-        job = cron.new(command=command_to_run, comment='bot-stimulator-sync')
-        job.setall(cron_schedule)
-        cron.write()
-        print(f"Cron job scheduled to run with schedule '{cron_schedule}': {command_to_run}")
+        run_sync()
     else:
-        parser.print_help()
-        sys.exit(1)
+        start_cron_job(run_sync, cron_schedule=CRON_SCHEDULE, id='bot-stimulator-sync', replace_existing=True)
+
 
 if __name__ == "__main__":
     main()
