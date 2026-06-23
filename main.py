@@ -6,6 +6,7 @@ import argparse
 import sys
 import os
 from crontab import CronTab
+from dotenv import load_dotenv
 from src.scrapper import create_fetcher
 from src.uploader import create_uploader
 
@@ -40,6 +41,8 @@ def main():
         uploader = create_uploader("openai")
         uploader.upload(saved_files)
     elif args.command == "cron":
+        load_dotenv()
+        cron_schedule = os.environ.get("CRON_SCHEDULE", "0 0 * * *")
         cron = CronTab(user=True)
         command_to_run = f"{sys.executable} {os.path.abspath(__file__)} sync"
         # Check if job already exists to avoid duplicates
@@ -49,9 +52,9 @@ def main():
             cron.remove_all(comment='bot-stimulator-sync')
         
         job = cron.new(command=command_to_run, comment='bot-stimulator-sync')
-        job.setall('0 0 * * *')  # Run once a day at midnight
+        job.setall(cron_schedule)
         cron.write()
-        print(f"Cron job scheduled to run daily at midnight: {command_to_run}")
+        print(f"Cron job scheduled to run with schedule '{cron_schedule}': {command_to_run}")
     else:
         parser.print_help()
         sys.exit(1)

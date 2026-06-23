@@ -1,4 +1,3 @@
-import os
 import sys
 from openai import OpenAI
 from src import config

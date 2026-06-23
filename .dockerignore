@@ -1,0 +1,23 @@
+# Git
+.git
+.gitignore
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Environment variables
+.env
+.env.*
+
+# Project specific
+resources/
+tests/
+*.md
+
+# Editor and OS
+.vscode/
+.idea/
+.DS_Store
