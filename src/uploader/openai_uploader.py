@@ -1,4 +1,6 @@
 import sys
+from typing import Dict, List, Union
+from pathlib import Path
 from openai import OpenAI
 from src import config
 from .base import Uploader
@@ -16,24 +18,32 @@ class OpenAIUploader(Uploader):
         self.client = OpenAI(api_key=config.OPENAI_API_KEY)
         self.vector_store_name = config.VECTOR_STORE_NAME
 
-    def upload(self, file_paths=None):
+    def upload(self, file_data: Union[Dict[str, List[Path]], List[Path], None] = None):
         """Upload saved markdown articles to the OpenAI Vector Store."""
-        if file_paths is None:
+        # Normalize file_data
+        if file_data is None:
             if not config.ARTICLES_DIR.exists():
                 print(f"Error: Directory '{config.ARTICLES_DIR}' not found. Please run 'fetch' command first.")
                 sys.exit(1)
 
             # 1. Collect all markdown file paths
-            file_paths = []
+            collected_paths = []
             for filepath in config.ARTICLES_DIR.iterdir():
                 if filepath.suffix == ".md":
-                    file_paths.append(filepath)
-                
-        if not file_paths:
+                    collected_paths.append(filepath)
+            file_data = {"added": collected_paths, "updated": []}
+        elif isinstance(file_data, list):
+            file_data = {"added": file_data, "updated": []}
+        
+        added_files = file_data.get("added", [])
+        updated_files = file_data.get("updated", [])
+        all_files = added_files + updated_files
+
+        if not all_files:
             print("No markdown files found to upload.")
             return
 
-        print(f"Found {len(file_paths)} markdown files. Preparing to upload to Vector Store...")
+        print(f"Found {len(all_files)} markdown files ({len(added_files)} added, {len(updated_files)} updated). Preparing to upload to Vector Store...")
 
         # 2. Get or create the Vector Store
         print(f"Checking for existing Vector Store named '{self.vector_store_name}'...")
@@ -51,11 +61,20 @@ class OpenAIUploader(Uploader):
             )
             print(f"Created Vector Store with ID: {vector_store.id}")
 
-        # 3. Upload files in a batch
+        # 3. Delete any existing files before uploading
+        print("Attempting to directly delete existing files...")
+        for file_path in updated_files:
+            try:
+                self.client.files.delete(file_path.name)
+            except Exception:
+                # Ignore errors if the file doesn't exist
+                pass
+
+        # 4. Upload files in a batch
         print("Uploading files... This might take a minute depending on the number of files.")
         
         # We must pass file objects to the SDK
-        file_streams = [open(path, "rb") for path in file_paths]
+        file_streams = [open(path, "rb") for path in all_files]
         
         try:
             # upload_and_poll automatically uploads all files and waits for them to be processed

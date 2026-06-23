@@ -64,7 +64,7 @@ class Fetcher(ABC):
 
         return "\n".join(lines)
 
-    def fetch_or_update(self) -> List[Path]:
+    def fetch_or_update(self) -> Dict[str, List[Path]]:
         """Fetch all articles from the configured provider and save them locally."""
         config.ARTICLES_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -73,7 +73,7 @@ class Fetcher(ABC):
         total_updated = 0
         total_skipped = 0
         total_errors = 0
-        saved_files = []
+        saved_files = {"added": [], "updated": []}
 
         print(f"Fetching articles using provider: {self.provider}…")
         print(f"Saving to: {config.ARTICLES_DIR}\n")
@@ -101,7 +101,7 @@ class Fetcher(ABC):
                 if status in ("added", "updated"):
                     md_content = self._article_to_markdown(article)
                     filepath.write_text(md_content, encoding="utf-8")
-                    saved_files.append(filepath)
+                    saved_files[status].append(filepath)
 
                 if status == "added":
                     total_added += 1

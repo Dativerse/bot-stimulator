@@ -93,10 +93,11 @@ class TestBaseFetcher(unittest.TestCase):
         mock_dir.__truediv__.side_effect = side_effect
         
         saved_files = fetcher.fetch_or_update()
-        
+    
         # Article 1 should be added (exists=False)
-        self.assertEqual(len(saved_files), 1)
-        self.assertEqual(saved_files[0], mock_file1)
+        self.assertEqual(len(saved_files["added"]), 1)
+        self.assertEqual(saved_files["added"][0], mock_file1)
+        self.assertEqual(len(saved_files["updated"]), 0)
         mock_file1.write_text.assert_called_once()
         
         # Article 2 should be skipped (updated_at matches)
