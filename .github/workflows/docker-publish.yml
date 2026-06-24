@@ -62,6 +62,10 @@ jobs:
             docker stop bot-stimulator || true
             docker rm bot-stimulator || true
             
+            # Ensure the resources directory exists and is writable by the non-root container user
+            mkdir -p /opt/bot-stimulator/resources
+            chmod 777 /opt/bot-stimulator/resources
+            
             # Start the new container
             docker run -d \
               --name bot-stimulator \
