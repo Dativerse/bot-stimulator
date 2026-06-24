@@ -52,8 +52,11 @@ jobs:
           username: root
           key: ${{ secrets.DROPLET_SSH_KEY }}
           script: |
-            # Pull the newest image that was just pushed to GHCR
-            docker pull ghcr.io/${{ github.repository }}:main
+            # Docker requires image names to be completely lowercase
+            REPO=$(echo "${{ github.repository }}" | tr '[:upper:]' '[:lower:]')
+            
+            # Pull the specific version that was just pushed to GHCR
+            docker pull ghcr.io/${REPO}:v1.0.${{ github.run_number }}
             
             # Stop and remove the old container if it exists
             docker stop bot-stimulator || true
@@ -66,4 +69,4 @@ jobs:
               -e OPENAI_API_KEY="${{ secrets.OPENAI_API_KEY }}" \
               -e CRON_SCHEDULE="${{ secrets.CRON_SCHEDULE }}" \
               -v /opt/bot-stimulator/resources:/app/resources \
-              ghcr.io/${{ github.repository }}:main
+              ghcr.io/${REPO}:v1.0.${{ github.run_number }}
