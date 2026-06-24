@@ -2,6 +2,8 @@ import json
 import time
 import urllib.request
 import urllib.error
+import ssl
+import certifi
 from typing import Iterator, Dict, Any
 from src import config
 from .base import Fetcher
@@ -10,13 +12,14 @@ from .factory import register_fetcher
 
 def fetch_json(url: str) -> dict:
     """GET a URL and return parsed JSON, with retries."""
+    context = ssl.create_default_context(cafile=certifi.where())
     for attempt in range(1, config.MAX_RETRIES + 1):
         try:
             req = urllib.request.Request(url, headers={
                 "Accept": "application/json",
                 "User-Agent": "ArticleFetcher/1.0",
             })
-            with urllib.request.urlopen(req, timeout=30) as resp:
+            with urllib.request.urlopen(req, timeout=30, context=context) as resp:
                 return json.loads(resp.read().decode("utf-8"))
         except urllib.error.HTTPError as exc:
             if exc.code == 429:

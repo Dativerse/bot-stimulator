@@ -51,6 +51,38 @@ class TestOptisignFetcher(unittest.TestCase):
         self.assertEqual(result, {"success": True})
         mock_sleep.assert_called_once_with(10)
 
+    @patch('src.scrapper.optisign_fetcher.urllib.request.urlopen')
+    @patch('src.scrapper.optisign_fetcher.time.sleep')
+    @patch('src.scrapper.optisign_fetcher.config')
+    def test_fetch_json_http_error_retry_exhausted(self, mock_config, mock_sleep, mock_urlopen):
+        mock_config.MAX_RETRIES = 2
+        mock_config.RETRY_DELAY = 1
+        
+        fp = MagicMock()
+        http_error = urllib.error.HTTPError("http://example.com", 500, "Internal Server Error", {}, fp)
+        
+        mock_urlopen.side_effect = [http_error, http_error]
+        
+        with self.assertRaises(urllib.error.HTTPError):
+            fetch_json("http://example.com")
+            
+        self.assertEqual(mock_sleep.call_count, 1)
+
+    @patch('src.scrapper.optisign_fetcher.urllib.request.urlopen')
+    @patch('src.scrapper.optisign_fetcher.time.sleep')
+    @patch('src.scrapper.optisign_fetcher.config')
+    def test_fetch_json_url_error_retry_exhausted(self, mock_config, mock_sleep, mock_urlopen):
+        mock_config.MAX_RETRIES = 2
+        mock_config.RETRY_DELAY = 1
+        
+        url_error = urllib.error.URLError("Network error")
+        mock_urlopen.side_effect = [url_error, url_error]
+        
+        with self.assertRaises(urllib.error.URLError):
+            fetch_json("http://example.com")
+            
+        self.assertEqual(mock_sleep.call_count, 1)
+
     @patch('src.scrapper.optisign_fetcher.fetch_json')
     @patch('src.scrapper.optisign_fetcher.time.sleep')
     @patch('src.scrapper.optisign_fetcher.config')
@@ -75,3 +107,17 @@ class TestOptisignFetcher(unittest.TestCase):
         self.assertEqual(articles[2]["id"], 3)
         
         self.assertEqual(mock_fetch_json.call_count, 2)
+
+    @patch('src.scrapper.optisign_fetcher.fetch_json')
+    @patch('src.scrapper.optisign_fetcher.config')
+    def test_get_articles_empty(self, mock_config, mock_fetch_json):
+        mock_config.BASE_URL = "http://example.com/api"
+        mock_config.PER_PAGE = 2
+        
+        mock_fetch_json.return_value = {"articles": []}
+        
+        fetcher = OptisignFetcher()
+        articles = list(fetcher.get_articles())
+        
+        self.assertEqual(len(articles), 0)
+        mock_fetch_json.assert_called_once()

@@ -12,10 +12,10 @@ def run_sync():
     """Fetch articles and immediately upload them to OpenAI."""
     print("Starting sync task...")
     fetcher = create_fetcher("optic")
-    saved_files = fetcher.fetch_or_update()
+    stage_file = fetcher.fetch_or_update()
     
     uploader = create_uploader("openai")
-    uploader.upload(saved_files)
+    uploader.upload(stage_file)
     print("Sync task completed.")
 
 def main():
@@ -24,9 +24,6 @@ def main():
 
     # Fetch Command
     subparsers.add_parser("fetch", help="Fetch articles from Zendesk and save them locally")
-
-    # Upload Command
-    subparsers.add_parser("upload", help="Upload local markdown articles to OpenAI Vector Store")
 
     # Sync Command
     subparsers.add_parser("sync", help="Fetch articles and immediately upload them to OpenAI")
@@ -39,9 +36,6 @@ def main():
     if args.command == "fetch":
         fetcher = create_fetcher("optic")
         fetcher.fetch_or_update()
-    elif args.command == "upload":
-        uploader = create_uploader("openai")
-        uploader.upload()
     elif args.command == "sync":
         run_sync()
     else:

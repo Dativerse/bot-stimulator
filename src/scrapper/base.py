@@ -1,7 +1,7 @@
 import json
 import re
 from abc import ABC, abstractmethod
-from typing import Iterator, Dict, Any, List
+from typing import Iterator, Dict, Any
 from pathlib import Path
 from src import config
 from src.utils.parser import html_to_markdown
@@ -64,7 +64,7 @@ class Fetcher(ABC):
 
         return "\n".join(lines)
 
-    def fetch_or_update(self) -> Dict[str, List[Path]]:
+    def fetch_or_update(self) -> Path:
         """Fetch all articles from the configured provider and save them locally."""
         config.ARTICLES_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -72,8 +72,12 @@ class Fetcher(ABC):
         total_added = 0
         total_updated = 0
         total_skipped = 0
+        total_deleted = 0
         total_errors = 0
-        saved_files = {"added": [], "updated": []}
+        
+        # Track existing files to find deleted ones
+        existing_files = set(f.name for f in config.ARTICLES_DIR.glob("*.md"))
+        stage_data = {}
 
         print(f"Fetching articles using provider: {self.provider}…")
         print(f"Saving to: {config.ARTICLES_DIR}\n")
@@ -84,7 +88,7 @@ class Fetcher(ABC):
                 filename = self._make_filename(article)
                 filepath = config.ARTICLES_DIR / filename
                 
-                status = "added"
+                status = "New"
                 if filepath.exists():
                     existing_content = filepath.read_text(encoding="utf-8")
                     match = re.search(r"^updated_at:\s*(.*)$", existing_content, re.MULTILINE)
@@ -92,36 +96,59 @@ class Fetcher(ABC):
                         existing_updated_at = match.group(1).strip()
                         new_updated_at = str(article.get('updated_at', '')).strip()
                         if existing_updated_at == new_updated_at:
-                            status = "skipped"
+                            status = "Unchanged"
                         else:
-                            status = "updated"
+                            status = "Modified"
                     else:
-                        status = "updated"
+                        status = "Modified"
 
-                if status in ("added", "updated"):
+                if status in ("New", "Modified"):
                     md_content = self._article_to_markdown(article)
                     filepath.write_text(md_content, encoding="utf-8")
-                    saved_files[status].append(filepath)
 
-                if status == "added":
+                stage_data[filename] = status
+                
+                if filename in existing_files:
+                    existing_files.remove(filename)
+
+                if status == "New":
                     total_added += 1
-                    print(f"  [Added] {filename}")
-                elif status == "updated":
+                    print(f"  [New] {filename}")
+                elif status == "Modified":
                     total_updated += 1
-                    print(f"  [Updated] {filename}")
-                elif status == "skipped":
+                    print(f"  [Modified] {filename}")
+                elif status == "Unchanged":
                     total_skipped += 1
-                    print(f"  [Skipped] {filename}")
+                    print(f"  [Unchanged] {filename}")
 
             except Exception as e:
                 total_errors += 1
                 print(f"  [Error] {article.get('id', 'Unknown')} - {str(e)}")
 
+        # Handle deleted files
+        for deleted_filename in existing_files:
+            stage_data[deleted_filename] = "Deleted"
+            total_deleted += 1
+            deleted_filepath = config.ARTICLES_DIR / deleted_filename
+            try:
+                deleted_filepath.unlink()
+                print(f"  [Deleted] {deleted_filename}")
+            except Exception as e:
+                print(f"  [Error Deleting] {deleted_filename} - {str(e)}")
+
         print(f"\nDone! Processed {total_processed} articles.")
-        print(f"   Added: {total_added}")
-        print(f"   Updated: {total_updated}")
-        print(f"   Skipped: {total_skipped}")
+        print(f"   New: {total_added}")
+        print(f"   Modified: {total_updated}")
+        print(f"   Unchanged: {total_skipped}")
+        print(f"   Deleted: {total_deleted}")
         if total_errors > 0:
             print(f"   Errors: {total_errors}")
+            
+        # Write stage file for uploader
+        stage_file = config.RESOURCES_DIR / "sync_stage.json"
+        with open(stage_file, "w") as f:
+            json.dump(stage_data, f, indent=4)
+
         print(f"   Saved to {config.ARTICLES_DIR}")
-        return saved_files
+        print(f"   Stage file created at {stage_file}")
+        return stage_file

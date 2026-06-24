@@ -69,3 +69,4 @@ venv.bak/
 
 # App specific
 resources/articles/
+resources/sync_stage.json

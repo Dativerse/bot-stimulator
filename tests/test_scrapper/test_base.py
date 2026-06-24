@@ -1,5 +1,5 @@
 import unittest
-from unittest.mock import patch, MagicMock
+from unittest.mock import patch, MagicMock, mock_open
 from pathlib import Path
 from src.scrapper.base import Fetcher
 
@@ -10,6 +10,12 @@ class DummyFetcher(Fetcher):
 class TestBaseFetcher(unittest.TestCase):
     def setUp(self):
         self.fetcher = DummyFetcher()
+
+    def test_abstract_get_articles(self):
+        # Instantiate Fetcher directly (bypassing ABC for testing abstract method)
+        Fetcher.__abstractmethods__ = frozenset()
+        f = Fetcher()
+        self.assertIsNone(f.get_articles())
 
     def test_slugify(self):
         self.assertEqual(self.fetcher._slugify("Hello World!"), "hello-world")
@@ -61,12 +67,19 @@ class TestBaseFetcher(unittest.TestCase):
         md_content = self.fetcher._article_to_markdown(article)
         self.assertIn('*No content.*', md_content)
 
+    @patch('src.scrapper.base.open', new_callable=mock_open)
     @patch('src.scrapper.base.config')
     @patch('src.scrapper.base.Path')
-    def test_fetch_or_update(self, mock_path, mock_config):
+    def test_fetch_or_update(self, mock_path, mock_config, mock_open_file):
         mock_dir = MagicMock()
         mock_config.ARTICLES_DIR = mock_dir
+        mock_config.RESOURCES_DIR = MagicMock()
+        mock_stage_file = MagicMock()
+        mock_config.RESOURCES_DIR.__truediv__.return_value = mock_stage_file
         
+        # Track existing files to find deleted ones
+        mock_dir.glob.return_value = []
+
         # Test article yields 2 articles
         class TwoArticleFetcher(Fetcher):
             def get_articles(self):
@@ -78,10 +91,12 @@ class TestBaseFetcher(unittest.TestCase):
         # Mock file operations
         mock_file1 = MagicMock()
         mock_file1.exists.return_value = False
+        mock_file1.name = "1-article-1.md"
         
         mock_file2 = MagicMock()
         mock_file2.exists.return_value = True
         mock_file2.read_text.return_value = "updated_at: 2023-01-01"
+        mock_file2.name = "2-article-2.md"
         
         # Configure the dir to return the mocked files
         def side_effect(filename):
@@ -92,13 +107,75 @@ class TestBaseFetcher(unittest.TestCase):
             return MagicMock()
         mock_dir.__truediv__.side_effect = side_effect
         
-        saved_files = fetcher.fetch_or_update()
+        with patch('builtins.print'):
+            saved_file = fetcher.fetch_or_update()
     
+        self.assertEqual(saved_file, mock_stage_file)
+        
         # Article 1 should be added (exists=False)
-        self.assertEqual(len(saved_files["added"]), 1)
-        self.assertEqual(saved_files["added"][0], mock_file1)
-        self.assertEqual(len(saved_files["updated"]), 0)
         mock_file1.write_text.assert_called_once()
         
         # Article 2 should be skipped (updated_at matches)
         mock_file2.write_text.assert_not_called()
+        
+        # Check stage file was written
+        mock_open_file.assert_called_once_with(mock_stage_file, "w")
+
+    @patch('src.scrapper.base.open', new_callable=mock_open)
+    @patch('src.scrapper.base.config')
+    @patch('src.scrapper.base.Path')
+    def test_fetch_or_update_modified_deleted_error(self, mock_path, mock_config, mock_open_file):
+        mock_dir = MagicMock()
+        mock_config.ARTICLES_DIR = mock_dir
+        mock_config.RESOURCES_DIR = MagicMock()
+        mock_stage_file = MagicMock()
+        mock_config.RESOURCES_DIR.__truediv__.return_value = mock_stage_file
+        
+        # We have an existing file that will be deleted, and one that will be modified
+        mock_dir.glob.return_value = [MagicMock(name="deleted.md"), MagicMock(name="1-article.md")]
+        
+        # Test article yields 1 article and 1 error article
+        class ErrorArticleFetcher(Fetcher):
+            def get_articles(self):
+                yield {"id": 1, "title": "Article", "updated_at": "2023-01-02"} # Will modify
+                yield {"id": 2, "title": "Error"} # Will cause exception if mocked properly
+                
+        fetcher = ErrorArticleFetcher()
+        
+        # Mock file operations
+        mock_file1 = MagicMock()
+        mock_file1.exists.return_value = True
+        mock_file1.read_text.return_value = "updated_at: 2023-01-01" # Different updated_at
+        mock_file1.name = "1-article.md"
+        
+        mock_file2 = MagicMock()
+        mock_file2.exists.side_effect = Exception("Mocked error") # Cause exception for article 2
+        mock_file2.name = "2-error.md"
+        
+        # Configure the dir to return the mocked files
+        def side_effect(filename):
+            if "1-article" in filename:
+                return mock_file1
+            elif "2-error" in filename:
+                return mock_file2
+            elif "deleted.md" in filename:
+                mock_del = MagicMock()
+                mock_del.name = "deleted.md"
+                # Make unlink raise an error once to cover line 136-137
+                mock_del.unlink.side_effect = Exception("Unlink error")
+                return mock_del
+            return MagicMock(name=filename)
+        mock_dir.__truediv__.side_effect = side_effect
+        
+        # Make the glob return objects that have `name` attributes matching what existing_files expects
+        mock_glob_deleted = MagicMock()
+        mock_glob_deleted.name = "deleted.md"
+        mock_glob_1 = MagicMock()
+        mock_glob_1.name = "1-article.md"
+        mock_dir.glob.return_value = [mock_glob_deleted, mock_glob_1]
+        
+        with patch('builtins.print'):
+            saved_file = fetcher.fetch_or_update()
+            
+        self.assertEqual(saved_file, mock_stage_file)
+        mock_file1.write_text.assert_called_once() # It should write since it's modified

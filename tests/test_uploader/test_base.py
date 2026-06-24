@@ -9,3 +9,7 @@ class TestUploaderBase(unittest.TestCase):
                 
         uploader = ConcreteUploader()
         self.assertIsInstance(uploader, Uploader)
+
+    def test_abstract_upload_raises_error(self):
+        with self.assertRaises(TypeError):
+            Uploader()
