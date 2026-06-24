@@ -70,6 +70,8 @@ jobs:
             docker run -d \
               --name bot-stimulator \
               --restart unless-stopped \
+              --log-opt max-size=10m \
+              --log-opt max-file=3 \
               -e OPENAI_API_KEY="${{ secrets.OPENAI_API_KEY }}" \
               -e CRON_SCHEDULE="${{ secrets.CRON_SCHEDULE }}" \
               -v /opt/bot-stimulator/resources:/app/resources \
