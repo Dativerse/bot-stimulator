@@ -3,8 +3,8 @@ from src.uploader.base import Uploader
 from src.uploader.factory import create_uploader, register_uploader, _uploader_registry
 
 class DummyUploader(Uploader):
-    def upload(self, file_paths=None):
-        pass
+    def _execute_sync(self, files_to_upload, files_to_delete):
+        return []
 
 class TestFactory(unittest.TestCase):
     def setUp(self):
@@ -20,8 +20,8 @@ class TestFactory(unittest.TestCase):
     def test_register_uploader(self):
         @register_uploader("dummy", "test")
         class TestDummyUploader(Uploader):
-            def upload(self, file_paths=None):
-                pass
+            def _execute_sync(self, files_to_upload, files_to_delete):
+                return []
                 
         self.assertIn("dummy", _uploader_registry)
         self.assertIn("test", _uploader_registry)
@@ -31,8 +31,8 @@ class TestFactory(unittest.TestCase):
     def test_create_uploader_success(self):
         @register_uploader("dummy")
         class TestDummyUploader(Uploader):
-            def upload(self, file_paths=None):
-                pass
+            def _execute_sync(self, files_to_upload, files_to_delete):
+                return []
                 
         uploader = create_uploader("dummy")
         self.assertIsInstance(uploader, TestDummyUploader)

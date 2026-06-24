@@ -1,7 +1,6 @@
 import sys
-import json
 import time
-from typing import Dict, Union
+from typing import Dict, Union, List
 from pathlib import Path
 from openai import OpenAI
 from src import config
@@ -20,21 +19,8 @@ class OpenAIUploader(Uploader):
         self.client = OpenAI(api_key=config.OPENAI_API_KEY)
         self.vector_store_name = config.VECTOR_STORE_NAME
 
-    def upload(self, stage_file: Union[Path, str]):
-        """Upload saved markdown articles to the OpenAI Vector Store.
-        
-        Reads the files to upload from the provided `stage_file`.
-        """
-        stage_path = Path(stage_file)
-        if not stage_path.exists():
-            print(f"Error: Stage file '{stage_file}' not found.")
-            return
-        
-        with open(stage_path, "r") as f:
-            stage_data = json.load(f)
-            
-        files_to_upload = []
-        files_to_delete = {}
+    def _execute_sync(self, files_to_upload: List[Path], files_to_delete: List[str]) -> List[str]:
+        """Execute the sync logic specific to OpenAI Vector Store."""
         successfully_deleted_filenames = []
         
         # Build filename to file_id map from OpenAI
@@ -47,43 +33,23 @@ class OpenAIUploader(Uploader):
             print(f"Warning: Could not retrieve file IDs from OpenAI: {e}")
             filename_to_id = {}
 
-        for filename, status in stage_data.items():
-            filepath = config.ARTICLES_DIR / filename
-            
-            if status in ("New", "Modified"):
-                if not filepath.exists():
-                    continue
-                    
-                files_to_upload.append(filepath)
-                
-                # If Modified, we need to delete the old version first
-                if status == "Modified" and filename in filename_to_id:
-                    files_to_delete[filename] = filename_to_id[filename]
-                    
-            elif status == "Deleted":
-                if filename in filename_to_id:
-                    files_to_delete[filename] = filename_to_id[filename]
-                else:
-                    # Already not in OpenAI, consider it successfully deleted
-                    successfully_deleted_filenames.append(filename)
-        
-        print(f"Reading from stage file: {len(files_to_upload)} files to upload, {len(files_to_delete)} files to delete from OpenAI.")
-        
-        if not files_to_upload and not files_to_delete:
-            if successfully_deleted_filenames:
-                # Clean up the stage file for items that needed no action
-                for filename in successfully_deleted_filenames:
-                    if stage_data.get(filename) == "Deleted":
-                        del stage_data[filename]
-                with open(stage_path, "w") as f:
-                    json.dump(stage_data, f, indent=4)
+        openai_files_to_delete = {}
+        for filename in files_to_delete:
+            if filename in filename_to_id:
+                openai_files_to_delete[filename] = filename_to_id[filename]
+            else:
+                successfully_deleted_filenames.append(filename)
+
+        print(f"Reading from stage file: {len(files_to_upload)} files to upload, {len(openai_files_to_delete)} files to delete from OpenAI.")
+
+        if not files_to_upload and not openai_files_to_delete:
             print("No actionable changes found for OpenAI in stage file.")
-            return
+            return successfully_deleted_filenames
 
         if files_to_upload:
             print(f"Found {len(files_to_upload)} file(s) that need to be uploaded.")
-        if files_to_delete:
-            print(f"Found {len(files_to_delete)} file(s) that need to be deleted.")
+        if openai_files_to_delete:
+            print(f"Found {len(openai_files_to_delete)} file(s) that need to be deleted.")
 
         # 1. Get or create the Vector Store
         print(f"Checking for existing Vector Store named '{self.vector_store_name}'...")
@@ -101,9 +67,9 @@ class OpenAIUploader(Uploader):
             print(f"Created Vector Store with ID: {vector_store.id}")
 
         # 2. Delete any existing files that are being updated
-        if files_to_delete:
-            print(f"Attempting to delete {len(files_to_delete)} outdated/deleted file(s) from OpenAI...")
-            for filename, file_id in files_to_delete.items():
+        if openai_files_to_delete:
+            print(f"Attempting to delete {len(openai_files_to_delete)} outdated/deleted file(s) from OpenAI...")
+            for filename, file_id in openai_files_to_delete.items():
                 try:
                     self.client.files.delete(file_id)
                     successfully_deleted_filenames.append(filename)
@@ -142,11 +108,5 @@ class OpenAIUploader(Uploader):
                 finally:
                     for f in file_streams:
                         f.close()
-
-        # Clean up successfully deleted files from the stage_file
-        for filename in successfully_deleted_filenames:
-            if stage_data.get(filename) == "Deleted":
-                del stage_data[filename]
-        
-        with open(stage_path, "w") as f:
-            json.dump(stage_data, f, indent=4)
+                        
+        return successfully_deleted_filenames
