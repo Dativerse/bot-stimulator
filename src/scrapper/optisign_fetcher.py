@@ -1,5 +1,4 @@
 import json
-import ssl
 import time
 import urllib.request
 import urllib.error
@@ -8,10 +7,6 @@ from src import config
 from .base import Fetcher
 from .factory import register_fetcher
 
-# Workaround for macOS Python SSL certificate issue
-SSL_CTX = ssl.create_default_context()
-SSL_CTX.check_hostname = False
-SSL_CTX.verify_mode = ssl.CERT_NONE
 
 def fetch_json(url: str) -> dict:
     """GET a URL and return parsed JSON, with retries."""
@@ -21,7 +16,7 @@ def fetch_json(url: str) -> dict:
                 "Accept": "application/json",
                 "User-Agent": "ArticleFetcher/1.0",
             })
-            with urllib.request.urlopen(req, timeout=30, context=SSL_CTX) as resp:
+            with urllib.request.urlopen(req, timeout=30) as resp:
                 return json.loads(resp.read().decode("utf-8"))
         except urllib.error.HTTPError as exc:
             if exc.code == 429:

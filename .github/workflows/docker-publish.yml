@@ -60,7 +60,7 @@ jobs:
             
             # Stop and remove the old container if it exists
             docker stop bot-stimulator || true
-            docker rm bot-stimulator || true
+            docker rm -f bot-stimulator || true
             
             # Ensure the resources directory exists and is writable by the non-root container user
             mkdir -p /opt/bot-stimulator/resources
