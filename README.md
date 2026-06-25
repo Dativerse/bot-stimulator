@@ -62,9 +62,17 @@ The application provides a CLI with the following commands:
    ```
 
 2. **Run the container (example running sync task):**
-   ```bash
    docker run --rm --env-file .env bot-stimulator python main.py sync
    ```
+
+## OpenAI Chunking Strategy
+
+This project relies on OpenAI's default `auto` chunking strategy when uploading articles to the Vector Store. 
+
+**Why `auto`?**
+- Our fetcher explicitly converts Zendesk HTML into well-structured **Markdown files** (`.md`) with a front-matter metadata block.
+- OpenAI's `auto` strategy is highly optimized for Markdown syntax. It naturally understands `# Headers`, lists, and paragraphs, and uses those semantic markers to intelligently split chunks without slicing paragraphs in half.
+- Using a `static` (token-based) chunking strategy would ignore this clean structure and potentially cut important context midway through a sentence.
 
 ## Daily Job Logs
 
