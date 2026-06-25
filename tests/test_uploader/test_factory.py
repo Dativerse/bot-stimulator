@@ -3,8 +3,12 @@ from src.uploader.base import Uploader
 from src.uploader.factory import create_uploader, register_uploader, _uploader_registry
 
 class DummyUploader(Uploader):
-    def _execute_sync(self, files_to_upload, files_to_delete):
-        return []
+    def execute_new(self, filename):
+        return "new_id"
+    def execute_update(self, filename, file_id):
+        return "updated_id"
+    def execute_delete(self, filename, file_id):
+        return True
 
 class TestFactory(unittest.TestCase):
     def setUp(self):
@@ -20,8 +24,12 @@ class TestFactory(unittest.TestCase):
     def test_register_uploader(self):
         @register_uploader("dummy", "test")
         class TestDummyUploader(Uploader):
-            def _execute_sync(self, files_to_upload, files_to_delete):
-                return []
+            def execute_new(self, filename):
+                return "new_id"
+            def execute_update(self, filename, file_id):
+                return "updated_id"
+            def execute_delete(self, filename, file_id):
+                return True
                 
         self.assertIn("dummy", _uploader_registry)
         self.assertIn("test", _uploader_registry)
@@ -31,8 +39,12 @@ class TestFactory(unittest.TestCase):
     def test_create_uploader_success(self):
         @register_uploader("dummy")
         class TestDummyUploader(Uploader):
-            def _execute_sync(self, files_to_upload, files_to_delete):
-                return []
+            def execute_new(self, filename):
+                return "new_id"
+            def execute_update(self, filename, file_id):
+                return "updated_id"
+            def execute_delete(self, filename, file_id):
+                return True
                 
         uploader = create_uploader("dummy")
         self.assertIsInstance(uploader, TestDummyUploader)

@@ -44,24 +44,6 @@ class TestOpenAIUploader(unittest.TestCase):
     @patch('src.uploader.base.Path')
     @patch('src.uploader.openai_uploader.config')
     @patch('src.uploader.openai_uploader.OpenAI')
-    def test_upload_empty_stage_file_no_action(self, mock_openai, mock_config, mock_path_cls, mock_base_config):
-        mock_config.OPENAI_API_KEY = "test_key"
-        mock_stage_path = MagicMock()
-        mock_stage_path.exists.return_value = True
-        mock_path_cls.return_value = mock_stage_path
-        
-        uploader = OpenAIUploader()
-        # Stage data with only 'Unchanged' which is not handled
-        m_open = mock_open(read_data='{"file.md": "Unchanged"}')
-        with patch('builtins.open', m_open):
-            with patch('builtins.print') as mock_print:
-                uploader.upload("stage.json")
-                mock_print.assert_any_call("No actionable changes found for OpenAI in stage file.")
-
-    @patch('src.uploader.base.config')
-    @patch('src.uploader.base.Path')
-    @patch('src.uploader.openai_uploader.config')
-    @patch('src.uploader.openai_uploader.OpenAI')
     def test_upload_creates_new_vector_store(self, mock_openai, mock_config, mock_path_cls, mock_base_config):
         mock_config.OPENAI_API_KEY = "test_key"
         mock_config.VECTOR_STORE_NAME = "new_store"
@@ -81,16 +63,18 @@ class TestOpenAIUploader(unittest.TestCase):
         mock_filepath.exists.return_value = True
         mock_filepath.name = "new.md"
         mock_base_config.ARTICLES_DIR.__truediv__.return_value = mock_filepath
+        mock_config.ARTICLES_DIR.__truediv__.return_value = mock_filepath
         
-        stage_data = {"new.md": "New"}
+        stage_data = {"new.md": {"status": "New"}}
         
+        mock_file_resp = MagicMock()
+        mock_file_resp.id = "file_new"
+        mock_client.files.create.return_value = mock_file_resp
+
         mock_file_batch = MagicMock()
         mock_file_batch.status = "completed"
-        mock_client.vector_stores.file_batches.upload_and_poll.return_value = mock_file_batch
+        mock_client.vector_stores.files.create_and_poll.return_value = mock_file_batch
         
-        # mock files.list to return empty
-        mock_client.files.list.return_value.data = []
-
         uploader = OpenAIUploader()
         
         m_open = mock_open(read_data=json.dumps(stage_data))
@@ -98,7 +82,11 @@ class TestOpenAIUploader(unittest.TestCase):
             uploader.upload("stage.json")
             
         mock_client.vector_stores.create.assert_called_once_with(name="new_store")
-        mock_client.vector_stores.file_batches.upload_and_poll.assert_called_once()
+        mock_client.files.create.assert_called_once()
+        mock_client.vector_stores.files.create_and_poll.assert_called_once_with(
+            vector_store_id="vs_123",
+            file_id="file_new"
+        )
 
     @patch('src.uploader.base.config')
     @patch('src.uploader.base.Path')
@@ -106,6 +94,7 @@ class TestOpenAIUploader(unittest.TestCase):
     @patch('src.uploader.openai_uploader.OpenAI')
     def test_upload_modifies_and_deletes(self, mock_openai, mock_config, mock_path_cls, mock_base_config):
         mock_config.OPENAI_API_KEY = "test_key"
+        mock_config.VECTOR_STORE_NAME = "test_store"
         
         mock_client = MagicMock()
         mock_openai.return_value = mock_client
@@ -122,21 +111,21 @@ class TestOpenAIUploader(unittest.TestCase):
         mock_filepath.exists.return_value = True
         mock_filepath.name = "mod.md"
         mock_base_config.ARTICLES_DIR.__truediv__.return_value = mock_filepath
+        mock_config.ARTICLES_DIR.__truediv__.return_value = mock_filepath
         
-        stage_data = {"mod.md": "Modified", "del.md": "Deleted"}
+        stage_data = {
+            "mod.md": {"status": "Modified", "file_id": "file_mod"}, 
+            "del.md": {"status": "Deleted", "file_id": "file_del"}
+        }
         
+        mock_file_resp = MagicMock()
+        mock_file_resp.id = "file_mod_new"
+        mock_client.files.create.return_value = mock_file_resp
+
         mock_file_batch = MagicMock()
         mock_file_batch.status = "completed"
-        mock_client.vector_stores.file_batches.upload_and_poll.return_value = mock_file_batch
+        mock_client.vector_stores.files.create_and_poll.return_value = mock_file_batch
         
-        mock_file_mod = MagicMock()
-        mock_file_mod.filename = "mod.md"
-        mock_file_mod.id = "file_mod"
-        mock_file_del = MagicMock()
-        mock_file_del.filename = "del.md"
-        mock_file_del.id = "file_del"
-        mock_client.files.list.return_value.data = [mock_file_mod, mock_file_del]
-
         uploader = OpenAIUploader()
         
         m_open = mock_open(read_data=json.dumps(stage_data))
@@ -145,15 +134,18 @@ class TestOpenAIUploader(unittest.TestCase):
             
         mock_client.files.delete.assert_any_call("file_mod")
         mock_client.files.delete.assert_any_call("file_del")
-        mock_client.vector_stores.file_batches.upload_and_poll.assert_called_once()
+        mock_client.vector_stores.files.create_and_poll.assert_called_once_with(
+            vector_store_id="vs_123",
+            file_id="file_mod_new"
+        )
 
     @patch('src.uploader.base.config')
     @patch('src.uploader.base.Path')
     @patch('src.uploader.openai_uploader.config')
     @patch('src.uploader.openai_uploader.OpenAI')
-    @patch('src.uploader.openai_uploader.time.sleep')
-    def test_upload_retry_logic(self, mock_sleep, mock_openai, mock_config, mock_path_cls, mock_base_config):
+    def test_execute_new_with_rollback(self, mock_openai, mock_config, mock_path_cls, mock_base_config):
         mock_config.OPENAI_API_KEY = "test_key"
+        mock_config.VECTOR_STORE_NAME = "test_store"
         
         mock_client = MagicMock()
         mock_openai.return_value = mock_client
@@ -170,27 +162,27 @@ class TestOpenAIUploader(unittest.TestCase):
         mock_filepath.exists.return_value = True
         mock_filepath.name = "new.md"
         mock_base_config.ARTICLES_DIR.__truediv__.return_value = mock_filepath
+        mock_config.ARTICLES_DIR.__truediv__.return_value = mock_filepath
         
-        stage_data = {"new.md": "New"}
+        stage_data = {"new.md": {"status": "New"}}
         
-        mock_file_batch = MagicMock()
-        mock_file_batch.status = "completed"
-        mock_client.vector_stores.file_batches.upload_and_poll.side_effect = [
-            Exception("Fail 1"),
-            Exception("Fail 2"),
-            mock_file_batch
-        ]
-        
-        mock_client.files.list.return_value.data = []
+        mock_file_resp = MagicMock()
+        mock_file_resp.id = "file_new"
+        mock_client.files.create.return_value = mock_file_resp
 
+        mock_client.vector_stores.files.create_and_poll.side_effect = Exception("Failed to attach to vector store")
+        
         uploader = OpenAIUploader()
         
         m_open = mock_open(read_data=json.dumps(stage_data))
         with patch('builtins.open', m_open):
             uploader.upload("stage.json")
             
-        self.assertEqual(mock_client.vector_stores.file_batches.upload_and_poll.call_count, 3)
-        self.assertEqual(mock_sleep.call_count, 2)
+        self.assertEqual(mock_client.vector_stores.files.create_and_poll.call_count, 1)
+        
+        # Because vector store attach failed, rollback cleanup should have happened
+        self.assertEqual(mock_client.files.delete.call_count, 1)
+        mock_client.files.delete.assert_called_with("file_new")
 
 if __name__ == "__main__":
     unittest.main()

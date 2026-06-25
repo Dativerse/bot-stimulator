@@ -119,7 +119,7 @@ class TestBaseFetcher(unittest.TestCase):
         mock_file2.write_text.assert_not_called()
         
         # Check stage file was written
-        mock_open_file.assert_called_once_with(mock_stage_file, "w")
+        mock_open_file.assert_any_call(mock_stage_file, "w")
 
     @patch('src.scrapper.base.open', new_callable=mock_open)
     @patch('src.scrapper.base.config')

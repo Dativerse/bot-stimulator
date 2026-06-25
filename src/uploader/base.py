@@ -1,6 +1,6 @@
 import json
 from abc import ABC, abstractmethod
-from typing import Union, List
+from typing import Union, List, Dict, Tuple, Optional
 from pathlib import Path
 from src import config
 
@@ -15,35 +15,62 @@ class Uploader(ABC):
         with open(stage_path, "r") as f:
             stage_data = json.load(f)
             
-        files_to_upload = []
-        files_to_delete = []
+        for filename, info in list(stage_data.items()):
+            stage_updated = False
+            if not isinstance(info, dict):
+                status = info
+                file_id = None
+            else:
+                status = info.get("status")
+                file_id = info.get("file_id")
 
-        for filename, status in stage_data.items():
             filepath = config.ARTICLES_DIR / filename
             
-            if status in ("New", "Modified"):
+            if status == "New":
                 if not filepath.exists():
                     continue
-                files_to_upload.append(filepath)
-                if status == "Modified":
-                    files_to_delete.append(filename)
+                new_id = self.execute_new(filename)
+                if new_id:
+                    stage_data[filename] = {"status": "Synced", "file_id": new_id}
+                    stage_updated = True
+                    
+            elif status == "Modified":
+                if not filepath.exists():
+                    continue
+                if file_id:
+                    new_id = self.execute_update(filename, file_id)
+                else:
+                    new_id = self.execute_new(filename)
+                
+                if new_id:
+                    stage_data[filename] = {"status": "Synced", "file_id": new_id}
+                    stage_updated = True
+                    
             elif status == "Deleted":
-                files_to_delete.append(filename)
-
-        successfully_deleted = self._execute_sync(files_to_upload, files_to_delete)
-
-        if successfully_deleted:
-            for filename in successfully_deleted:
-                if stage_data.get(filename) == "Deleted":
+                if file_id:
+                    success = self.execute_delete(filename, file_id)
+                else:
+                    success = True
+                
+                if success:
                     del stage_data[filename]
-            
-            with open(stage_path, "w") as f:
-                json.dump(stage_data, f, indent=4)
+                    stage_updated = True
+
+            if stage_updated:
+                with open(stage_path, "w") as f:
+                    json.dump(stage_data, f, indent=4)
 
     @abstractmethod
-    def _execute_sync(self, files_to_upload: List[Path], files_to_delete: List[str]) -> List[str]:
-        """
-        Execute the upload and delete operations.
-        Returns a list of filenames that were successfully deleted (or didn't exist anymore).
-        """
+    def execute_new(self, filename: str) -> Optional[str]:
+        """Execute logic to upload a new file. Returns the new file_id or None on failure."""
+        pass
+
+    @abstractmethod
+    def execute_update(self, filename: str, file_id: str) -> Optional[str]:
+        """Execute logic to update an existing file. Returns the new file_id or None on failure."""
+        pass
+
+    @abstractmethod
+    def execute_delete(self, filename: str, file_id: str) -> bool:
+        """Execute logic to delete an existing file. Returns True on success."""
         pass

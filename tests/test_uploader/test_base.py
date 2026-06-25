@@ -4,8 +4,12 @@ from src.uploader.base import Uploader
 class TestUploaderBase(unittest.TestCase):
     def test_can_instantiate_concrete_class(self):
         class ConcreteUploader(Uploader):
-            def _execute_sync(self, files_to_upload, files_to_delete):
-                return []
+            def execute_new(self, filename):
+                return "new_id"
+            def execute_update(self, filename, file_id):
+                return "updated_id"
+            def execute_delete(self, filename, file_id):
+                return True
                 
         uploader = ConcreteUploader()
         self.assertIsInstance(uploader, Uploader)

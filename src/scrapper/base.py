@@ -64,91 +64,133 @@ class Fetcher(ABC):
 
         return "\n".join(lines)
 
+    def _get_article_status(self, filepath: Path, article: dict, filename: str, stage_data: dict) -> str:
+        """Determine if an article is New, Modified, or Unchanged."""
+        if not filepath.exists():
+            return "New"
+        
+        existing_content = filepath.read_text(encoding="utf-8")
+        match = re.search(r"^updated_at:\s*(.*)$", existing_content, re.MULTILINE)
+        if match:
+            existing_updated_at = match.group(1).strip()
+            new_updated_at = str(article.get('updated_at', '')).strip()
+            if existing_updated_at == new_updated_at:
+                info = stage_data.get(filename)
+                if isinstance(info, dict):
+                    return info.get("status", "Uploaded")
+                elif isinstance(info, str):
+                    return info
+                return "Uploaded"
+        return "Modified"
+
+    def _delete_file_safe(self, deleted_filepath: Path, deleted_filename: str):
+        try:
+            deleted_filepath.unlink()
+            print(f"  [Deleted] {deleted_filename}")
+        except Exception as e:
+            print(f"  [Error Deleting] {deleted_filename} - {str(e)}")
+
+    def _handle_deleted_files(self, existing_files: set, stage_data: dict, stats: dict):
+        """Remove leftover files and update stage data."""
+        for deleted_filename in existing_files:
+            if deleted_filename not in stage_data or not isinstance(stage_data[deleted_filename], dict):
+                stage_data[deleted_filename] = {}
+            stage_data[deleted_filename]["status"] = "Deleted"
+            
+            stats["total_deleted"] += 1
+            deleted_filepath = config.ARTICLES_DIR / deleted_filename
+            self._delete_file_safe(deleted_filepath, deleted_filename)
+
+    def _write_stage_file(self, stage_data: dict) -> Path:
+        """Write the sync stage file and return its path."""
+        stage_file = config.RESOURCES_DIR / "sync_stage.json"
+        with open(stage_file, "w") as f:
+            json.dump(stage_data, f, indent=4)
+        return stage_file
+
+    def _print_summary(self, stats: dict):
+        """Print the final sync summary."""
+        print(f"\nDone! Processed {stats['total_processed']} articles.")
+        print(f"   New: {stats['total_added']}")
+        print(f"   Modified: {stats['total_updated']}")
+        print(f"   Uploaded: {stats['total_skipped']}")
+        if stats.get('total_synced', 0) > 0:
+            print(f"   Synced: {stats['total_synced']}")
+        print(f"   Deleted: {stats['total_deleted']}")
+        if stats['total_errors'] > 0:
+            print(f"   Errors: {stats['total_errors']}")
+        print(f"   Saved to {config.ARTICLES_DIR}")
+
+    def _process_article_safe(self, article: dict, existing_files: set, stage_data: dict, stats: dict):
+        try:
+            filename = self._make_filename(article)
+            filepath = config.ARTICLES_DIR / filename
+            
+            status = self._get_article_status(filepath, article, filename, stage_data)
+
+            if status in ("New", "Modified"):
+                md_content = self._article_to_markdown(article)
+                filepath.write_text(md_content, encoding="utf-8")
+
+            if filename not in stage_data or not isinstance(stage_data[filename], dict):
+                stage_data[filename] = {}
+            stage_data[filename]["status"] = status
+            
+            existing_files.discard(filename)
+
+            if status == "New":
+                stats["total_added"] += 1
+                print(f"  [New] {filename}")
+            elif status == "Modified":
+                stats["total_updated"] += 1
+                print(f"  [Modified] {filename}")
+            elif status == "Uploaded":
+                stats["total_skipped"] += 1
+                print(f"  [Uploaded] {filename}")
+            elif status == "Synced":
+                stats["total_synced"] += 1
+                print(f"  [Synced] {filename}")
+
+        except Exception as e:
+            stats["total_errors"] += 1
+            print(f"  [Error] {article.get('id', 'Unknown')} - {str(e)}")
+
     def fetch_or_update(self) -> Path:
         """Fetch all articles from the configured provider and save them locally."""
         config.ARTICLES_DIR.mkdir(parents=True, exist_ok=True)
 
-        total_processed = 0
-        total_added = 0
-        total_updated = 0
-        total_skipped = 0
-        total_deleted = 0
-        total_errors = 0
+        stats = {
+            "total_processed": 0, "total_added": 0, "total_updated": 0,
+            "total_skipped": 0, "total_deleted": 0, "total_errors": 0,
+            "total_synced": 0
+        }
         
         # Track existing files to find deleted ones
         existing_files = set(f.name for f in config.ARTICLES_DIR.glob("*.md"))
-        stage_data = {}
+        
+        stage_file = config.RESOURCES_DIR / "sync_stage.json"
+        existing_stage_data = {}
+        if stage_file.exists():
+            try:
+                with open(stage_file, "r") as f:
+                    existing_stage_data = json.load(f)
+            except json.JSONDecodeError:
+                print("Warning: sync_stage.json is corrupted. Starting fresh.")
+
+        # stage_data is initialized from existing to preserve uploader's data (like file_id)
+        stage_data = existing_stage_data.copy()
 
         print(f"Fetching articles using provider: {self.provider}…")
         print(f"Saving to: {config.ARTICLES_DIR}\n")
 
         for article in self.get_articles():
-            total_processed += 1
-            try:
-                filename = self._make_filename(article)
-                filepath = config.ARTICLES_DIR / filename
-                
-                status = "New"
-                if filepath.exists():
-                    existing_content = filepath.read_text(encoding="utf-8")
-                    match = re.search(r"^updated_at:\s*(.*)$", existing_content, re.MULTILINE)
-                    if match:
-                        existing_updated_at = match.group(1).strip()
-                        new_updated_at = str(article.get('updated_at', '')).strip()
-                        if existing_updated_at == new_updated_at:
-                            status = "Unchanged"
-                        else:
-                            status = "Modified"
-                    else:
-                        status = "Modified"
+            stats["total_processed"] += 1
+            self._process_article_safe(article, existing_files, stage_data, stats)
 
-                if status in ("New", "Modified"):
-                    md_content = self._article_to_markdown(article)
-                    filepath.write_text(md_content, encoding="utf-8")
-
-                stage_data[filename] = status
-                
-                if filename in existing_files:
-                    existing_files.remove(filename)
-
-                if status == "New":
-                    total_added += 1
-                    print(f"  [New] {filename}")
-                elif status == "Modified":
-                    total_updated += 1
-                    print(f"  [Modified] {filename}")
-                elif status == "Unchanged":
-                    total_skipped += 1
-                    print(f"  [Unchanged] {filename}")
-
-            except Exception as e:
-                total_errors += 1
-                print(f"  [Error] {article.get('id', 'Unknown')} - {str(e)}")
-
-        # Handle deleted files
-        for deleted_filename in existing_files:
-            stage_data[deleted_filename] = "Deleted"
-            total_deleted += 1
-            deleted_filepath = config.ARTICLES_DIR / deleted_filename
-            try:
-                deleted_filepath.unlink()
-                print(f"  [Deleted] {deleted_filename}")
-            except Exception as e:
-                print(f"  [Error Deleting] {deleted_filename} - {str(e)}")
-
-        print(f"\nDone! Processed {total_processed} articles.")
-        print(f"   New: {total_added}")
-        print(f"   Modified: {total_updated}")
-        print(f"   Unchanged: {total_skipped}")
-        print(f"   Deleted: {total_deleted}")
-        if total_errors > 0:
-            print(f"   Errors: {total_errors}")
+        self._handle_deleted_files(existing_files, stage_data, stats)
+        self._print_summary(stats)
             
-        # Write stage file for uploader
-        stage_file = config.RESOURCES_DIR / "sync_stage.json"
-        with open(stage_file, "w") as f:
-            json.dump(stage_data, f, indent=4)
-
-        print(f"   Saved to {config.ARTICLES_DIR}")
+        stage_file = self._write_stage_file(stage_data)
         print(f"   Stage file created at {stage_file}")
+        
         return stage_file
