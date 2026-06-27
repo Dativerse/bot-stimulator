@@ -16,7 +16,6 @@ class Fetcher(ABC):
     @abstractmethod
     def get_articles(self) -> Iterator[Dict[str, Any]]:
         """Yield articles fetched from the specific provider."""
-        pass
 
     def _slugify(self, text: str, max_length: int = 80) -> str:
         """Create a filesystem-safe slug from a title string."""

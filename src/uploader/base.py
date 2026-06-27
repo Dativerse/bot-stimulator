@@ -64,14 +64,11 @@ class Uploader(ABC):
     @abstractmethod
     def execute_new(self, filename: str) -> Optional[str]:
         """Execute logic to upload a new file. Returns the new file_id or None on failure."""
-        pass
 
     @abstractmethod
     def execute_update(self, filename: str, file_id: str) -> Optional[str]:
         """Execute logic to update an existing file. Returns the new file_id or None on failure."""
-        pass
 
     @abstractmethod
     def execute_delete(self, filename: str, file_id: str) -> bool:
         """Execute logic to delete an existing file. Returns True on success."""
-        pass

@@ -3,7 +3,7 @@
 This document maps the project's core requirements to the implemented architecture, explaining *why* specific engineering decisions were made to ensure a robust, production-ready, and scalable solution.
 
 ## Requirement 1: Scrape & Normalize to Markdown
-**Goal**: Ingest messy web content from Zendesk, convert to clean Markdown, save as `<slug>.md`, and remove nav/ads.
+**Goal**: Ingest messy web content from Optisign, convert to clean Markdown, save as `<slug>.md`, and remove nav/ads.
 
 ### Approach & Rationale
 - **HTML to Markdown Parsing Strategy**: Instead of naive text extraction, a custom HTML-to-Markdown parser was built (`src/utils/parser.py`). 
@@ -24,17 +24,52 @@ This document maps the project's core requirements to the implemented architectu
   - *Why?* Fetching all articles and blindly re-uploading them is inefficient and costly (OpenAI API limits and billing). The state file acts as a local cache/ledger, ensuring only necessary delta operations are performed on the remote Vector Store. Furthermore, this robust state tracking mechanism ensures the application is **fully compatible with being re-deployed while running**. If a redeployment interrupts an active sync, the new container will safely pick up right where the previous one left off without duplicating effort or losing data.
 - **Reactive Error Handling (No Defensive Clutter)**: The codebase eschews deep `if-else` defensive checks (like `os.path.exists`) in favor of idiomatic Python `try-except` blocks.
   - *Why?* Proactive checks are subject to race conditions and clutter business logic. Reactive handling ensures that if a single file fails (e.g., permission issue, network timeout), the job logs the error and continues processing the rest of the batch, preventing a complete job failure.
-- **Dual-Mode Scheduling (APScheduler)**: The job is orchestrated via `scheduler/base.py`.
+- **Dual-Mode Scheduling (APScheduler)**: The job is orchestrated via `src/scheduler/base.py`.
   - *Why?* The scheduler is configured to run the sync *immediately* upon startup and then on a recurring `CRON_SCHEDULE`. This ensures that deploying the Docker container yields immediate results, while simultaneously satisfying the daily recurring requirement without manual intervention.
 
 ## Shared Architecture: The Extensible Provider Pattern
 
 Both the **Fetcher** (Scrapper) and the **Uploader** share the exact same architectural DNA, combining the **Factory Pattern** and the **Strategy/Template Method Pattern**. 
 
+### Architecture Diagram
+
+```text
+                        +--------------------------------+
+                        |                                |
+                        |            main.py             |
+                        |                                |
+                        +----------------+---------------+
+                                         |
+                                         v
+                        +--------------------------------+
+                        |                                |
+                        |      src/utils/factory.py      |
+                        |                                |
+                        +--------+---------------+-------+
+                                 |               |
+               +-----------------+               +-----------------+
+               |                                                   |
+               v                                                   v
+    +-------------------------+                         +-------------------------+
+    |                         |                         |                         |
+    |      BaseScrapper       |                         |      BaseUploader       |
+    |  (src/scrapper/base.py) |                         | (src/uploader/base.py)  |
+    |                         |                         |                         |
+    +-----------+-------------+                         +-----------+-------------+
+                |                                                   |
+                v                                                   v
+    +-------------------------+                         +-------------------------+
+    |                         |                         |                         |
+    |     OptisignFetcher     |                         |     OpenAIUploader      |
+    | (src/scrapper/optisign_ |                         | (src/uploader/openai_   |
+    |       fetcher.py)       |                         |       uploader.py)      |
+    +-------------------------+                         +-------------------------+
+```
+
 ### Approach & Rationale
 - **The Factory Registry (`src/utils/factory.py`)**: Both modules are instantiated dynamically using a shared Registry. `main.py` is entirely decoupled from concrete implementations. It simply asks the factory for the provider specified in `.env`.
-- **Base Class Abstractions**: Both implement a base class (`BaseScrapper` and `BaseUploader`) that handles universal orchestration logic (like reading/writing to `sync_stage.json`, calculating deltas, and logging). The child classes (e.g., `ZendeskFetcher`, `OpenAIUploader`) only implement the API-specific integration.
-  - *Why?* This rigorously adheres to the **Open/Closed Principle** (open for extension, closed for modification) and ensures absolute **Separation of Concerns**. If the business transitions from Zendesk to Intercom tomorrow, or from OpenAI to Pinecone next week, a new class is simply registered without touching a single line of the core orchestration logic in `main.py`.
+- **Base Class Abstractions**: Both implement a base class (`BaseScrapper` in `src/scrapper/base.py` and `BaseUploader` in `src/uploader/base.py`) that handles universal orchestration logic (like reading/writing to `sync_stage.json`, calculating deltas, and logging). The child classes (e.g., `OptisignFetcher`, `OpenAIUploader`) only implement the API-specific integration.
+  - *Why?* This rigorously adheres to the **Open/Closed Principle** (open for extension, closed for modification) and ensures absolute **Separation of Concerns**. If the business transitions from Optisign to Intercom tomorrow, or from OpenAI to Pinecone next week, a new class is simply registered without touching a single line of the core orchestration logic in `main.py`.
 
 ## Summary of Senior Engineering Practices
 1. **Separation of Concerns**: Heavy utilization of Factories, Base classes, and modular utilities.

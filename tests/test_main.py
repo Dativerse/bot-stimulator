@@ -1,6 +1,5 @@
 import unittest
 from unittest.mock import patch, MagicMock
-import sys
 
 # Import main correctly to avoid running it
 from main import main, run_sync

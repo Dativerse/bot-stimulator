@@ -2,9 +2,7 @@ import unittest
 from unittest.mock import patch, MagicMock, mock_open
 from src.uploader.openai_uploader import OpenAIUploader
 from src.enums import SyncStatus
-import sys
 import json
-from pathlib import Path
 
 class TestOpenAIUploader(unittest.TestCase):
     @patch('src.uploader.openai_uploader.config')
