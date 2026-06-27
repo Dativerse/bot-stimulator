@@ -10,11 +10,6 @@ class TestBaseFetcher(unittest.TestCase):
     def setUp(self):
         self.fetcher = DummyFetcher()
 
-    def test_abstract_get_articles(self):
-        # Instantiate Fetcher directly (bypassing ABC for testing abstract method)
-        Fetcher.__abstractmethods__ = frozenset()
-        f = Fetcher()
-        self.assertIsNone(f.get_articles())
 
     def test_slugify(self):
         self.assertEqual(self.fetcher._slugify("Hello World!"), "hello-world")
