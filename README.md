@@ -2,6 +2,25 @@
 
 Bot Stimulator CLI is a tool designed to fetch articles and upload them to OpenAI's Vector Store, keeping your AI assistants up to date.
 
+## Project Structure
+
+```text
+.
+├── Dockerfile
+├── README.md
+├── REQUIREMENTS.md
+├── main.py
+├── requirements.txt
+├── resources/           # Stores sync status and scraped files
+├── src/
+│   ├── config.py        # Configuration and env variables
+│   ├── scheduler/       # APScheduler setup for cron jobs
+│   ├── scrapper/        # Logic to fetch and parse articles
+│   ├── uploader/        # Logic to format and upload to Vector Stores
+│   └── utils/           # Helper utilities (HTML to Markdown parsing)
+└── tests/               # Unit tests
+```
+
 ## Setup
 
 1. **Clone the repository:**
