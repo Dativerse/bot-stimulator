@@ -86,17 +86,19 @@ The application provides a CLI with the following commands:
 
 ## OpenAI Chunking Strategy
 
-This project relies on OpenAI's default `auto` chunking strategy when uploading articles to the Vector Store. 
+This project utilizes a **Static Chunking Strategy** with a maximum size of `1000` tokens and an overlap of `200` tokens when uploading articles to the Vector Store.
 
-**Why `auto`?**
-- Our fetcher explicitly converts Zendesk HTML into well-structured **Markdown files** (`.md`) with a front-matter metadata block.
-- OpenAI's `auto` strategy is highly optimized for Markdown syntax. It naturally understands `# Headers`, lists, and paragraphs, and uses those semantic markers to intelligently split chunks without slicing paragraphs in half.
-- Using a `static` (token-based) chunking strategy would ignore this clean structure and potentially cut important context midway through a sentence.
+**Why Static (1000 Tokens)?**
+- Based on our metadata analysis of over 400 articles, the content is highly structured using Markdown headers (`#`, `##`, `###`).
+- **99% of all header-separated sections are under ~750 tokens**.
+- By setting a strict `1000` token limit, we ensure that nearly all semantic sections remain perfectly intact within a single chunk without being severed.
+- For the rare 1% of outlier sections that are abnormally large, this static limit acts as a crucial backstop to ensure chunks remain optimally sized for the `text-embedding` models, maintaining high retrieval precision.
 
 ## Daily Job Logs
 
 The automated daily sync is managed through our CI/CD pipeline. View the job logs here:
-[GitHub Actions - Bot Stimulator Logs](https://github.com/Dativerse/bot-stimulator/actions)
+- [GitHub Actions - Bot Stimulator Logs](https://github.com/Dativerse/bot-stimulator/actions)
+- [Live Job Logs Server](http://137.184.27.194:8080/)
 
 ## Screenshot of Playground Answer
 

@@ -84,7 +84,14 @@ class TestOpenAIUploader(unittest.TestCase):
         mock_client.files.create.assert_called_once()
         mock_client.vector_stores.files.create_and_poll.assert_called_once_with(
             vector_store_id="vs_123",
-            file_id="file_new"
+            file_id="file_new",
+            chunking_strategy={
+                "type": "static",
+                "static": {
+                    "max_chunk_size_tokens": 1000,
+                    "chunk_overlap_tokens": 200
+                }
+            }
         )
 
     @patch('src.uploader.base.config')
@@ -135,7 +142,14 @@ class TestOpenAIUploader(unittest.TestCase):
         mock_client.files.delete.assert_any_call("file_del")
         mock_client.vector_stores.files.create_and_poll.assert_called_once_with(
             vector_store_id="vs_123",
-            file_id="file_mod_new"
+            file_id="file_mod_new",
+            chunking_strategy={
+                "type": "static",
+                "static": {
+                    "max_chunk_size_tokens": 1000,
+                    "chunk_overlap_tokens": 200
+                }
+            }
         )
 
     @patch('src.uploader.base.config')

@@ -55,7 +55,14 @@ class OpenAIUploader(Uploader):
             print(f"Attaching {filename} (ID: {response.id}) to Vector Store {vector_store.id}...")
             self.client.vector_stores.files.create_and_poll(
                 vector_store_id=vector_store.id,
-                file_id=response.id
+                file_id=response.id,
+                chunking_strategy={
+                    "type": "static",
+                    "static": {
+                        "max_chunk_size_tokens": 1000,
+                        "chunk_overlap_tokens": 200
+                    }
+                }
             )
             print(f"Successfully uploaded and attached {filename}.")
             return response.id

@@ -1,0 +1,6871 @@
+{
+  "summary_stats": {
+    "total_articles": 402,
+    "total_sections_across_all_articles": 2452,
+    "average_sections_per_article": 6.099502487562189,
+    "section_word_count_stats": {
+      "min": 0,
+      "max": 927,
+      "average": 95.87030995106036,
+      "median": 59.0,
+      "p75": 125.25,
+      "p90": 225.9000000000001,
+      "p95": 314.0,
+      "p99": 548.3699999999972
+    },
+    "section_char_count_stats": {
+      "min": 0,
+      "max": 127050,
+      "average": 798.5693311582381,
+      "median": 463.0,
+      "p75": 964.5,
+      "p90": 1700.0,
+      "p95": 2300.45,
+      "p99": 3771.639999999992
+    },
+    "header_totals": {
+      "h1": 412,
+      "h2": 766,
+      "h3": 644,
+      "h4": 224,
+      "h5": 4,
+      "h6": 0
+    }
+  },
+  "article_metadata": [
+    {
+      "file_name": "4409448788499-how-to-use-mrss-feeds-with-optisigns.md",
+      "total_sections": 4,
+      "headers": {
+        "h1": 1,
+        "h2": 2,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 28,
+        "max": 243,
+        "average": 116.75
+      }
+    },
+    {
+      "file_name": "12947820509971-showhide-offline-indicator-on-your-player.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 27,
+        "max": 147,
+        "average": 87.0
+      }
+    },
+    {
+      "file_name": "1500009042742-fireos-tvs-amazon-insigna-toshiba-tcl.md",
+      "total_sections": 5,
+      "headers": {
+        "h1": 1,
+        "h2": 1,
+        "h3": 2,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 26,
+        "max": 182,
+        "average": 82.8
+      }
+    },
+    {
+      "file_name": "45619214182803-how-to-set-up-an-outlook-calendar-app-with-shared-permissions.md",
+      "total_sections": 7,
+      "headers": {
+        "h1": 1,
+        "h2": 3,
+        "h3": 2,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 173,
+        "average": 77.42857142857143
+      }
+    },
+    {
+      "file_name": "360056977214-how-to-use-google-sheets-with-optisigns.md",
+      "total_sections": 9,
+      "headers": {
+        "h1": 1,
+        "h2": 4,
+        "h3": 1,
+        "h4": 2,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 300,
+        "average": 99.77777777777777
+      }
+    },
+    {
+      "file_name": "10259143299219-how-to-use-website-screenshot-app.md",
+      "total_sections": 3,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 1,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 27,
+        "max": 250,
+        "average": 113.0
+      }
+    },
+    {
+      "file_name": "4411743936147-how-to-connect-to-8021x-enterprise-wifi-on-raspberry-pi.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 31,
+        "max": 295,
+        "average": 163.0
+      }
+    },
+    {
+      "file_name": "4403267825171-how-to-use-the-social-mix-app.md",
+      "total_sections": 4,
+      "headers": {
+        "h1": 1,
+        "h2": 2,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 28,
+        "max": 335,
+        "average": 125.5
+      }
+    },
+    {
+      "file_name": "360021855653-what-hardware-and-devices-are-supported.md",
+      "total_sections": 4,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 2,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 248,
+        "average": 81.0
+      }
+    },
+    {
+      "file_name": "4409673381011-how-to-use-the-emergency-feed-app.md",
+      "total_sections": 8,
+      "headers": {
+        "h1": 1,
+        "h2": 2,
+        "h3": 4,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 249,
+        "average": 93.625
+      }
+    },
+    {
+      "file_name": "4411956075027-clean-install-optisigns-on-raspberry-pilinux.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 27,
+        "max": 42,
+        "average": 34.5
+      }
+    },
+    {
+      "file_name": "360048660813-how-to-use-facebook-live-stream-app.md",
+      "total_sections": 5,
+      "headers": {
+        "h1": 1,
+        "h2": 3,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 28,
+        "max": 132,
+        "average": 65.8
+      }
+    },
+    {
+      "file_name": "360057146573-advanced-how-to-manually-install-activate-optisigns-remote-agent-on-linux-or-ras.md",
+      "total_sections": 7,
+      "headers": {
+        "h1": 1,
+        "h2": 3,
+        "h3": 2,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 140,
+        "average": 56.142857142857146
+      }
+    },
+    {
+      "file_name": "27356288211859-how-to-use-icloud-calendar-with-optisigns.md",
+      "total_sections": 5,
+      "headers": {
+        "h1": 1,
+        "h2": 1,
+        "h3": 0,
+        "h4": 2,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 573,
+        "average": 143.6
+      }
+    },
+    {
+      "file_name": "360047501233-how-to-use-instagram-counter-app.md",
+      "total_sections": 4,
+      "headers": {
+        "h1": 1,
+        "h2": 2,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 27,
+        "max": 221,
+        "average": 102.75
+      }
+    },
+    {
+      "file_name": "28421615261971-roku-troubleshooting-guide.md",
+      "total_sections": 5,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 3,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 241,
+        "average": 93.4
+      }
+    },
+    {
+      "file_name": "360056087613-how-to-clear-cache-on-your-fire-stick-device.md",
+      "total_sections": 3,
+      "headers": {
+        "h1": 1,
+        "h2": 1,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 30,
+        "max": 144,
+        "average": 74.0
+      }
+    },
+    {
+      "file_name": "36501302096915-how-to-access-the-troubleshooting-page-of-the-optisigns-player.md",
+      "total_sections": 3,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 1,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 31,
+        "max": 665,
+        "average": 243.66666666666666
+      }
+    },
+    {
+      "file_name": "360052361293-how-to-update-fire-tv-os-to-latest-version.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 30,
+        "max": 176,
+        "average": 103.0
+      }
+    },
+    {
+      "file_name": "360016375153-assign-content-to-your-screens.md",
+      "total_sections": 4,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 2,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 26,
+        "max": 96,
+        "average": 58.75
+      }
+    },
+    {
+      "file_name": "360026559573-how-to-create-and-use-the-split-screen-app.md",
+      "total_sections": 14,
+      "headers": {
+        "h1": 1,
+        "h2": 3,
+        "h3": 7,
+        "h4": 2,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 213,
+        "average": 68.21428571428571
+      }
+    },
+    {
+      "file_name": "19171222981523-how-to-use-yammer-app-on-optisigns.md",
+      "total_sections": 5,
+      "headers": {
+        "h1": 1,
+        "h2": 2,
+        "h3": 1,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 13,
+        "max": 323,
+        "average": 100.4
+      }
+    },
+    {
+      "file_name": "360016484393-how-can-i-improve-stability-of-fire-tv-as-digital-signage-player.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 22,
+        "max": 33,
+        "average": 27.5
+      }
+    },
+    {
+      "file_name": "360037965133-how-to-use-rss-feeds-with-optisigns.md",
+      "total_sections": 4,
+      "headers": {
+        "h1": 1,
+        "h2": 2,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 28,
+        "max": 320,
+        "average": 137.25
+      }
+    },
+    {
+      "file_name": "360016375573-how-to-use-published-google-slides-with-optisigns-old-way.md",
+      "total_sections": 5,
+      "headers": {
+        "h1": 1,
+        "h2": 3,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 31,
+        "max": 115,
+        "average": 90.8
+      }
+    },
+    {
+      "file_name": "360016981853-creating-and-using-schedules-with-optisigns.md",
+      "total_sections": 12,
+      "headers": {
+        "h1": 1,
+        "h2": 9,
+        "h3": 1,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 350,
+        "average": 101.16666666666667
+      }
+    },
+    {
+      "file_name": "33940834613139-what-do-i-get-with-an-optisigns-free-plan.md",
+      "total_sections": 10,
+      "headers": {
+        "h1": 1,
+        "h2": 4,
+        "h3": 4,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 186,
+        "average": 77.3
+      }
+    },
+    {
+      "file_name": "37966066335891-getting-started-with-an-optisigns-free-trial.md",
+      "total_sections": 9,
+      "headers": {
+        "h1": 1,
+        "h2": 6,
+        "h3": 1,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 228,
+        "average": 62.333333333333336
+      }
+    },
+    {
+      "file_name": "5090125683219-brightsign-players.md",
+      "total_sections": 7,
+      "headers": {
+        "h1": 1,
+        "h2": 4,
+        "h3": 1,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 23,
+        "max": 209,
+        "average": 98.57142857142857
+      }
+    },
+    {
+      "file_name": "360054557434-view-billing-history-and-download-receipts.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 27,
+        "max": 37,
+        "average": 32.0
+      }
+    },
+    {
+      "file_name": "360038769394-how-to-create-and-use-yelp-reviews-wall.md",
+      "total_sections": 4,
+      "headers": {
+        "h1": 1,
+        "h2": 2,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 29,
+        "max": 218,
+        "average": 111.25
+      }
+    },
+    {
+      "file_name": "4408052029587-how-to-use-weather-apps-based-on-device-location.md",
+      "total_sections": 4,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 2,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 106,
+        "average": 50.0
+      }
+    },
+    {
+      "file_name": "35337746613139-how-to-create-custom-news-feeds-with-optisync.md",
+      "total_sections": 19,
+      "headers": {
+        "h1": 1,
+        "h2": 2,
+        "h3": 6,
+        "h4": 5,
+        "h5": 4,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 402,
+        "average": 116.10526315789474
+      }
+    },
+    {
+      "file_name": "360041481553-how-to-use-simple-calendar-app.md",
+      "total_sections": 4,
+      "headers": {
+        "h1": 1,
+        "h2": 2,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 27,
+        "max": 140,
+        "average": 70.25
+      }
+    },
+    {
+      "file_name": "27690296225555-ai-camera-app-quick-start.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 27,
+        "max": 813,
+        "average": 420.0
+      }
+    },
+    {
+      "file_name": "38680194603155-promax.md",
+      "total_sections": 17,
+      "headers": {
+        "h1": 1,
+        "h2": 6,
+        "h3": 9,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 571,
+        "average": 116.6470588235294
+      }
+    },
+    {
+      "file_name": "33382537925267-making-a-video-wall-with-optisigns-video-wall-app.md",
+      "total_sections": 22,
+      "headers": {
+        "h1": 1,
+        "h2": 6,
+        "h3": 12,
+        "h4": 2,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 368,
+        "average": 105.72727272727273
+      }
+    },
+    {
+      "file_name": "42313875427859-brand-kit-and-enforcing-brand-guidelines.md",
+      "total_sections": 10,
+      "headers": {
+        "h1": 1,
+        "h2": 2,
+        "h3": 5,
+        "h4": 1,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 226,
+        "average": 67.1
+      }
+    },
+    {
+      "file_name": "360026610194-stretch-your-images-document-stretch-vs-fit-vs-zoom-your-content.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 33,
+        "max": 151,
+        "average": 92.0
+      }
+    },
+    {
+      "file_name": "360042950593-how-to-use-the-simple-clock-app.md",
+      "total_sections": 10,
+      "headers": {
+        "h1": 1,
+        "h2": 3,
+        "h3": 3,
+        "h4": 2,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 146,
+        "average": 68.5
+      }
+    },
+    {
+      "file_name": "360051014713-how-to-use-youtube-with-optisigns.md",
+      "total_sections": 4,
+      "headers": {
+        "h1": 1,
+        "h2": 2,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 27,
+        "max": 188,
+        "average": 77.5
+      }
+    },
+    {
+      "file_name": "360060202914-how-to-use-youtube-channel-with-optisigns.md",
+      "total_sections": 4,
+      "headers": {
+        "h1": 1,
+        "h2": 2,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 29,
+        "max": 288,
+        "average": 108.0
+      }
+    },
+    {
+      "file_name": "360056356414-how-to-use-scrolling-website-app.md",
+      "total_sections": 4,
+      "headers": {
+        "h1": 1,
+        "h2": 2,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 27,
+        "max": 190,
+        "average": 91.5
+      }
+    },
+    {
+      "file_name": "9061950942995-using-rs-232-to-schedule-tv-power-onoff-or-other-commands.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 31,
+        "max": 711,
+        "average": 371.0
+      }
+    },
+    {
+      "file_name": "360016376793-what-happen-if-internet-connection-is-lost.md",
+      "total_sections": 5,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 3,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 45,
+        "average": 30.4
+      }
+    },
+    {
+      "file_name": "20750060900883-your-facebook-page-doesnt-show-in-the-dropdown-list.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 30,
+        "max": 123,
+        "average": 76.5
+      }
+    },
+    {
+      "file_name": "8066591235603-how-to-use-rtsp-stream-on-windows-or-raspberry-pi-via-optisigns.md",
+      "total_sections": 8,
+      "headers": {
+        "h1": 1,
+        "h2": 2,
+        "h3": 1,
+        "h4": 3,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 178,
+        "average": 63.625
+      }
+    },
+    {
+      "file_name": "4404827608467-how-to-unpin-optisigns-app-on-your-managed-android-stick-player.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 32,
+        "max": 120,
+        "average": 76.0
+      }
+    },
+    {
+      "file_name": "15313086319763-how-to-design-kiosk-apps-using-kiosk-designer-pro.md",
+      "total_sections": 8,
+      "headers": {
+        "h1": 1,
+        "h2": 3,
+        "h3": 3,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 338,
+        "average": 101.0
+      }
+    },
+    {
+      "file_name": "18823504383891-optisigns-getting-started-guide.md",
+      "total_sections": 11,
+      "headers": {
+        "h1": 1,
+        "h2": 5,
+        "h3": 1,
+        "h4": 3,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 192,
+        "average": 52.63636363636363
+      }
+    },
+    {
+      "file_name": "360058700673-how-to-unpair-a-device-screen.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 27,
+        "max": 68,
+        "average": 47.5
+      }
+    },
+    {
+      "file_name": "360055549854-pre-configure-wi-fi-with-optisigns-devices.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 26,
+        "max": 140,
+        "average": 83.0
+      }
+    },
+    {
+      "file_name": "360024310813-how-to-use-a-pdf-with-optisigns.md",
+      "total_sections": 6,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 4,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 17,
+        "max": 63,
+        "average": 31.166666666666668
+      }
+    },
+    {
+      "file_name": "52412502456083-connect-google-meet-hardware-to-optisigns-digital-signage.md",
+      "total_sections": 17,
+      "headers": {
+        "h1": 3,
+        "h2": 7,
+        "h3": 6,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 21,
+        "max": 233,
+        "average": 83.88235294117646
+      }
+    },
+    {
+      "file_name": "360057327693-advanced-how-to-install-activate-optisigns-remote-agent-on-windows.md",
+      "total_sections": 5,
+      "headers": {
+        "h1": 1,
+        "h2": 1,
+        "h3": 2,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 111,
+        "average": 53.4
+      }
+    },
+    {
+      "file_name": "1500003161182-how-to-move-screen-to-other-team.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 28,
+        "max": 204,
+        "average": 116.0
+      }
+    },
+    {
+      "file_name": "18500083191059-how-to-add-captions-to-vimeo-videos.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 28,
+        "max": 224,
+        "average": 126.0
+      }
+    },
+    {
+      "file_name": "360055900513-how-to-create-and-use-virtual-screen-app.md",
+      "total_sections": 4,
+      "headers": {
+        "h1": 1,
+        "h2": 2,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 29,
+        "max": 152,
+        "average": 85.5
+      }
+    },
+    {
+      "file_name": "49039295567891-chromeos-pwa-instructions.md",
+      "total_sections": 12,
+      "headers": {
+        "h1": 1,
+        "h2": 5,
+        "h3": 4,
+        "h4": 1,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 234,
+        "average": 82.83333333333333
+      }
+    },
+    {
+      "file_name": "360049872414-how-to-use-facebook-video-app.md",
+      "total_sections": 4,
+      "headers": {
+        "h1": 1,
+        "h2": 2,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 15,
+        "max": 122,
+        "average": 61.75
+      }
+    },
+    {
+      "file_name": "4409607912211-how-to-setup-wifi-with-optisigns-admin-mobile-app-on-optisigns-pre-configured-an.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 35,
+        "max": 305,
+        "average": 170.0
+      }
+    },
+    {
+      "file_name": "360050642833-how-to-use-google-slides-with-optisigns.md",
+      "total_sections": 11,
+      "headers": {
+        "h1": 1,
+        "h2": 3,
+        "h3": 5,
+        "h4": 1,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 252,
+        "average": 94.9090909090909
+      }
+    },
+    {
+      "file_name": "4407493404307-how-to-set-up-saml-20-with-optisigns-and-google-workspace.md",
+      "total_sections": 6,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 2,
+        "h4": 2,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 32,
+        "max": 573,
+        "average": 195.0
+      }
+    },
+    {
+      "file_name": "360024859713-how-to-display-microsoft-power-bi-dashboards-reports-with-optisigns.md",
+      "total_sections": 21,
+      "headers": {
+        "h1": 1,
+        "h2": 5,
+        "h3": 7,
+        "h4": 7,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 557,
+        "average": 126.28571428571429
+      }
+    },
+    {
+      "file_name": "1500011611322-how-to-use-the-cbc-news-app.md",
+      "total_sections": 6,
+      "headers": {
+        "h1": 1,
+        "h2": 3,
+        "h3": 1,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 252,
+        "average": 69.16666666666667
+      }
+    },
+    {
+      "file_name": "25607930101907-how-to-get-the-most-out-of-your-digital-signs.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 31,
+        "max": 209,
+        "average": 120.0
+      }
+    },
+    {
+      "file_name": "360017964153-how-to-use-weather-apps-in-optisigns.md",
+      "total_sections": 14,
+      "headers": {
+        "h1": 1,
+        "h2": 5,
+        "h3": 5,
+        "h4": 2,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 477,
+        "average": 89.5
+      }
+    },
+    {
+      "file_name": "6605515731603-apple-tv-player-release-notes-limitations.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 28,
+        "max": 195,
+        "average": 111.5
+      }
+    },
+    {
+      "file_name": "360053198573-how-to-uninstallreinstall-optisigns-app-from-your-fire-stick-device.md",
+      "total_sections": 4,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 2,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 31,
+        "max": 105,
+        "average": 68.75
+      }
+    },
+    {
+      "file_name": "44650391786131-kiosk-setup-hub.md",
+      "total_sections": 10,
+      "headers": {
+        "h1": 1,
+        "h2": 2,
+        "h3": 3,
+        "h4": 3,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 91,
+        "average": 20.9
+      }
+    },
+    {
+      "file_name": "4414552808467-introduction.md",
+      "total_sections": 8,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 2,
+        "h4": 4,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 53,
+        "average": 36.5
+      }
+    },
+    {
+      "file_name": "52113036672403-room-integrations-turn-your-meeting-rooms-into-digital-signage.md",
+      "total_sections": 10,
+      "headers": {
+        "h1": 1,
+        "h2": 8,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 30,
+        "max": 301,
+        "average": 105.5
+      }
+    },
+    {
+      "file_name": "33468569218067-how-to-display-dynamic-event-schedules-using-optisync.md",
+      "total_sections": 17,
+      "headers": {
+        "h1": 1,
+        "h2": 5,
+        "h3": 5,
+        "h4": 5,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 572,
+        "average": 106.82352941176471
+      }
+    },
+    {
+      "file_name": "360060049534-how-to-export-high-resolution-canvas-template-designs.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 29,
+        "max": 49,
+        "average": 39.0
+      }
+    },
+    {
+      "file_name": "42830652820115-your-templates.md",
+      "total_sections": 5,
+      "headers": {
+        "h1": 1,
+        "h2": 2,
+        "h3": 1,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 31,
+        "max": 165,
+        "average": 105.6
+      }
+    },
+    {
+      "file_name": "13097501958291-optisigns-iot-sensor-add-on-quick-start.md",
+      "total_sections": 10,
+      "headers": {
+        "h1": 1,
+        "h2": 5,
+        "h3": 3,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 695,
+        "average": 203.8
+      }
+    },
+    {
+      "file_name": "29792081890323-guide-for-creating-content-with-optisigns.md",
+      "total_sections": 14,
+      "headers": {
+        "h1": 1,
+        "h2": 2,
+        "h3": 9,
+        "h4": 1,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 237,
+        "average": 75.0
+      }
+    },
+    {
+      "file_name": "4529298306963-how-to-use-microsoft-excel-online-with-optisigns.md",
+      "total_sections": 5,
+      "headers": {
+        "h1": 1,
+        "h2": 2,
+        "h3": 1,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 29,
+        "max": 384,
+        "average": 152.2
+      }
+    },
+    {
+      "file_name": "27458261258387-move-screens-or-devices-from-one-account-to-another.md",
+      "total_sections": 8,
+      "headers": {
+        "h1": 1,
+        "h2": 2,
+        "h3": 4,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 146,
+        "average": 50.875
+      }
+    },
+    {
+      "file_name": "360039264133-how-to-create-and-use-qr-code-call-to-action-app.md",
+      "total_sections": 4,
+      "headers": {
+        "h1": 1,
+        "h2": 2,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 32,
+        "max": 193,
+        "average": 114.75
+      }
+    },
+    {
+      "file_name": "4414539282067-displaying-sharepoint-sites-on-optisigns.md",
+      "total_sections": 12,
+      "headers": {
+        "h1": 1,
+        "h2": 3,
+        "h3": 2,
+        "h4": 5,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 273,
+        "average": 65.66666666666667
+      }
+    },
+    {
+      "file_name": "1500008008981-how-to-enable-ssh-for-your-raspberry-pi.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 29,
+        "max": 118,
+        "average": 73.5
+      }
+    },
+    {
+      "file_name": "6091289267475-how-to-use-matterport-app.md",
+      "total_sections": 3,
+      "headers": {
+        "h1": 1,
+        "h2": 1,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 26,
+        "max": 113,
+        "average": 73.33333333333333
+      }
+    },
+    {
+      "file_name": "1500002131621-how-to-use-youtube-live-with-optisigns.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 28,
+        "max": 171,
+        "average": 99.5
+      }
+    },
+    {
+      "file_name": "1500009492202-how-to-use-on-this-day-app.md",
+      "total_sections": 4,
+      "headers": {
+        "h1": 1,
+        "h2": 2,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 28,
+        "max": 153,
+        "average": 75.25
+      }
+    },
+    {
+      "file_name": "11412877112595-what-if-the-optisigns-app-does-not-auto-start-on-an-android-tv.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 33,
+        "max": 154,
+        "average": 93.5
+      }
+    },
+    {
+      "file_name": "360042736794-how-to-set-an-asset-to-live-or-expire-at-specific-time.md",
+      "total_sections": 6,
+      "headers": {
+        "h1": 1,
+        "h2": 3,
+        "h3": 1,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 23,
+        "max": 404,
+        "average": 132.33333333333334
+      }
+    },
+    {
+      "file_name": "360045120133-how-to-use-the-wall-street-journal-app.md",
+      "total_sections": 6,
+      "headers": {
+        "h1": 1,
+        "h2": 3,
+        "h3": 1,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 264,
+        "average": 72.33333333333333
+      }
+    },
+    {
+      "file_name": "28026588373139-how-to-fix-the-scaling-issue-on-optisigns-android-device-gen-3.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 33,
+        "max": 162,
+        "average": 97.5
+      }
+    },
+    {
+      "file_name": "35749502945555-how-to-using-sepa-and-ideal-for-eur-currency-subscription-payments.md",
+      "total_sections": 5,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 3,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 23,
+        "max": 192,
+        "average": 64.2
+      }
+    },
+    {
+      "file_name": "25273043501587-how-to-lockdown-ipadsingle-app-with-guided-accessibility.md",
+      "total_sections": 3,
+      "headers": {
+        "h1": 1,
+        "h2": 1,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 29,
+        "max": 144,
+        "average": 79.66666666666667
+      }
+    },
+    {
+      "file_name": "29232460955539-how-to-create-an-attract-screen-for-your-kiosk.md",
+      "total_sections": 8,
+      "headers": {
+        "h1": 1,
+        "h2": 2,
+        "h3": 2,
+        "h4": 2,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 314,
+        "average": 79.375
+      }
+    },
+    {
+      "file_name": "360045121233-how-to-use-the-new-york-times-app.md",
+      "total_sections": 6,
+      "headers": {
+        "h1": 1,
+        "h2": 3,
+        "h3": 1,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 275,
+        "average": 76.83333333333333
+      }
+    },
+    {
+      "file_name": "360058345334-how-to-run-optisigns-ai-add-on-on-start-up-in-windows.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 32,
+        "max": 136,
+        "average": 84.0
+      }
+    },
+    {
+      "file_name": "32272215514131-proplayer.md",
+      "total_sections": 16,
+      "headers": {
+        "h1": 1,
+        "h2": 6,
+        "h3": 8,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 451,
+        "average": 102.5
+      }
+    },
+    {
+      "file_name": "4414558295955-tutorial-create-update-add-remove-items-from-playlists.md",
+      "total_sections": 6,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 4,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 29,
+        "max": 99,
+        "average": 72.33333333333333
+      }
+    },
+    {
+      "file_name": "360058259834-audience-intelligence-ai-camera-faqs.md",
+      "total_sections": 10,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 1,
+        "h4": 7,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 134,
+        "average": 53.1
+      }
+    },
+    {
+      "file_name": "7865572050195-how-to-hide-certain-templates-categories-in-designers.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 29,
+        "max": 52,
+        "average": 40.5
+      }
+    },
+    {
+      "file_name": "14502723487379-how-to-use-aericast-add-on-for-wireless-presentation-and-video-conferencing.md",
+      "total_sections": 8,
+      "headers": {
+        "h1": 1,
+        "h2": 2,
+        "h3": 4,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 405,
+        "average": 92.875
+      }
+    },
+    {
+      "file_name": "7592123111699-host-your-htmljs-or-create-your-own-web-app-with-hosted-website.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 33,
+        "max": 489,
+        "average": 261.0
+      }
+    },
+    {
+      "file_name": "8899727608083-how-to-use-the-qr-scan-to-interact-touchless-qr-app.md",
+      "total_sections": 10,
+      "headers": {
+        "h1": 1,
+        "h2": 3,
+        "h3": 5,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 247,
+        "average": 110.3
+      }
+    },
+    {
+      "file_name": "28424138317971-samsung-tizen-tvs-troubleshooting-guide.md",
+      "total_sections": 9,
+      "headers": {
+        "h1": 1,
+        "h2": 2,
+        "h3": 1,
+        "h4": 4,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 154,
+        "average": 50.22222222222222
+      }
+    },
+    {
+      "file_name": "360047275934-whitelist-optisigns-ip-addresses-ports.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 27,
+        "max": 390,
+        "average": 208.5
+      }
+    },
+    {
+      "file_name": "360016388733-how-to-create-and-use-instagram-wall.md",
+      "total_sections": 4,
+      "headers": {
+        "h1": 1,
+        "h2": 2,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 28,
+        "max": 369,
+        "average": 151.5
+      }
+    },
+    {
+      "file_name": "41432385864595-designer-20-new-features.md",
+      "total_sections": 26,
+      "headers": {
+        "h1": 1,
+        "h2": 3,
+        "h3": 21,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 126,
+        "average": 71.65384615384616
+      }
+    },
+    {
+      "file_name": "4408052949139-how-to-use-calendar-mix-app.md",
+      "total_sections": 3,
+      "headers": {
+        "h1": 1,
+        "h2": 1,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 27,
+        "max": 542,
+        "average": 202.0
+      }
+    },
+    {
+      "file_name": "1500005888781-how-to-best-use-canva-with-optisigns.md",
+      "total_sections": 9,
+      "headers": {
+        "h1": 1,
+        "h2": 6,
+        "h3": 1,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 250,
+        "average": 100.33333333333333
+      }
+    },
+    {
+      "file_name": "360054298754-how-to-factory-reset-your-fire-stick-device.md",
+      "total_sections": 3,
+      "headers": {
+        "h1": 1,
+        "h2": 1,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 30,
+        "max": 85,
+        "average": 63.333333333333336
+      }
+    },
+    {
+      "file_name": "4403306341523-how-to-set-up-monitoring-alert-feature.md",
+      "total_sections": 4,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 2,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 29,
+        "max": 331,
+        "average": 172.5
+      }
+    },
+    {
+      "file_name": "14557706459283-present-share-ios-android-phone-tablet-to-your-screen-with-optisigns-aericast-ad.md",
+      "total_sections": 4,
+      "headers": {
+        "h1": 1,
+        "h2": 1,
+        "h3": 1,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 35,
+        "max": 76,
+        "average": 49.5
+      }
+    },
+    {
+      "file_name": "5149077938835-how-to-use-advanced-website-app.md",
+      "total_sections": 4,
+      "headers": {
+        "h1": 1,
+        "h2": 2,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 27,
+        "max": 278,
+        "average": 112.25
+      }
+    },
+    {
+      "file_name": "1500006130902-how-to-use-live-tv-with-ads-app.md",
+      "total_sections": 5,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 3,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 29,
+        "max": 377,
+        "average": 122.4
+      }
+    },
+    {
+      "file_name": "360049875794-how-to-use-follow-us-app.md",
+      "total_sections": 4,
+      "headers": {
+        "h1": 1,
+        "h2": 2,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 27,
+        "max": 195,
+        "average": 88.0
+      }
+    },
+    {
+      "file_name": "31695220475283-configuring-mass-deployment-with-jamf-pro-mdm-on-apple-devices.md",
+      "total_sections": 7,
+      "headers": {
+        "h1": 1,
+        "h2": 4,
+        "h3": 1,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 11,
+        "max": 192,
+        "average": 64.42857142857143
+      }
+    },
+    {
+      "file_name": "360016313754-how-to-install-an-apk-file-on-your-fire-tv.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 31,
+        "max": 192,
+        "average": 111.5
+      }
+    },
+    {
+      "file_name": "360026559613-how-to-create-a-scrolling-strip-bars.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 29,
+        "max": 281,
+        "average": 155.0
+      }
+    },
+    {
+      "file_name": "360058855273-how-to-use-google-docs-with-optisigns.md",
+      "total_sections": 6,
+      "headers": {
+        "h1": 1,
+        "h2": 3,
+        "h3": 1,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 28,
+        "max": 100,
+        "average": 67.66666666666667
+      }
+    },
+    {
+      "file_name": "12947300131731-showhide-downloading-status-on-your-player.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 27,
+        "max": 140,
+        "average": 83.5
+      }
+    },
+    {
+      "file_name": "39250660729747-how-to-use-the-tableau-app.md",
+      "total_sections": 13,
+      "headers": {
+        "h1": 1,
+        "h2": 5,
+        "h3": 2,
+        "h4": 4,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 398,
+        "average": 110.15384615384616
+      }
+    },
+    {
+      "file_name": "23030445716883-how-to-setup-aericast-meet-wireless-video-conferencing.md",
+      "total_sections": 4,
+      "headers": {
+        "h1": 3,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 29,
+        "max": 244,
+        "average": 116.25
+      }
+    },
+    {
+      "file_name": "360041587014-how-to-change-billing-information.md",
+      "total_sections": 6,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 4,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 13,
+        "max": 91,
+        "average": 37.833333333333336
+      }
+    },
+    {
+      "file_name": "360037416494-how-to-use-the-atlassian-jira-app.md",
+      "total_sections": 5,
+      "headers": {
+        "h1": 1,
+        "h2": 1,
+        "h3": 2,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 267,
+        "average": 80.4
+      }
+    },
+    {
+      "file_name": "360033693534-powerpoint-resolution-size-for-use-with-digital-signage.md",
+      "total_sections": 5,
+      "headers": {
+        "h1": 1,
+        "h2": 3,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 29,
+        "max": 145,
+        "average": 83.6
+      }
+    },
+    {
+      "file_name": "4404053129619-how-to-use-microsoft-teams-meeting-app-with-optisigns.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 30,
+        "max": 268,
+        "average": 149.0
+      }
+    },
+    {
+      "file_name": "360037463934-how-to-create-and-use-google-reviews-wall.md",
+      "total_sections": 4,
+      "headers": {
+        "h1": 1,
+        "h2": 2,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 29,
+        "max": 373,
+        "average": 150.25
+      }
+    },
+    {
+      "file_name": "15268811715347-cannot-find-the-optisigns-app-on-your-samsung-smart-tv.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 31,
+        "max": 242,
+        "average": 136.5
+      }
+    },
+    {
+      "file_name": "17129313173395-how-to-manage-sub-account-billing-with-optisigns.md",
+      "total_sections": 3,
+      "headers": {
+        "h1": 1,
+        "h2": 1,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 28,
+        "max": 178,
+        "average": 122.33333333333333
+      }
+    },
+    {
+      "file_name": "32129032857875-where-to-buy-optisigns-devices.md",
+      "total_sections": 5,
+      "headers": {
+        "h1": 1,
+        "h2": 3,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 30,
+        "max": 632,
+        "average": 202.4
+      }
+    },
+    {
+      "file_name": "360016990233-multi-users-invite-your-team-members-to-your-account.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 29,
+        "max": 229,
+        "average": 129.0
+      }
+    },
+    {
+      "file_name": "44890229616403-using-an-enterprise-network-8021x-with-optisigns.md",
+      "total_sections": 9,
+      "headers": {
+        "h1": 1,
+        "h2": 3,
+        "h3": 4,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 147,
+        "average": 73.44444444444444
+      }
+    },
+    {
+      "file_name": "360016375793-can-i-have-my-invoices-receipts-sent-to-a-different-email-address.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 20,
+        "max": 33,
+        "average": 26.5
+      }
+    },
+    {
+      "file_name": "360050728934-difference-between-instagram-instagram-business-app.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 28,
+        "max": 108,
+        "average": 68.0
+      }
+    },
+    {
+      "file_name": "20879903340947-how-to-use-content-tags-in-the-playlist.md",
+      "total_sections": 6,
+      "headers": {
+        "h1": 1,
+        "h2": 3,
+        "h3": 1,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 379,
+        "average": 166.66666666666666
+      }
+    },
+    {
+      "file_name": "360016382473-how-to-use-the-website-app-and-display-urls-on-optisigns.md",
+      "total_sections": 7,
+      "headers": {
+        "h1": 1,
+        "h2": 3,
+        "h3": 2,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 267,
+        "average": 77.0
+      }
+    },
+    {
+      "file_name": "360046859534-how-to-use-twitch-app.md",
+      "total_sections": 4,
+      "headers": {
+        "h1": 1,
+        "h2": 2,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 26,
+        "max": 168,
+        "average": 85.25
+      }
+    },
+    {
+      "file_name": "20153471319187-external-storage-on-optisigns-devices.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 26,
+        "max": 140,
+        "average": 83.0
+      }
+    },
+    {
+      "file_name": "4428997257491-how-to-organize-templates-and-share-across-teams.md",
+      "total_sections": 3,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 1,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 30,
+        "max": 340,
+        "average": 137.66666666666666
+      }
+    },
+    {
+      "file_name": "360041638433-how-to-use-the-countdown-app.md",
+      "total_sections": 8,
+      "headers": {
+        "h1": 1,
+        "h2": 2,
+        "h3": 4,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 370,
+        "average": 111.125
+      }
+    },
+    {
+      "file_name": "4406214738707-how-to-use-the-microsoft-meeting-room-app.md",
+      "total_sections": 11,
+      "headers": {
+        "h1": 1,
+        "h2": 4,
+        "h3": 2,
+        "h4": 3,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 253,
+        "average": 86.81818181818181
+      }
+    },
+    {
+      "file_name": "43657735780627-user-management-example-chain-restaurant-or-retail-store-with-multiple-locations.md",
+      "total_sections": 13,
+      "headers": {
+        "h1": 1,
+        "h2": 6,
+        "h3": 3,
+        "h4": 2,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 654,
+        "average": 161.53846153846155
+      }
+    },
+    {
+      "file_name": "4414564078995-error-handling.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 23,
+        "max": 97,
+        "average": 60.0
+      }
+    },
+    {
+      "file_name": "39488874989587-fixing-unexpected-screen-rotation-incorrect-orientation-with-optisigns-android-s.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 32,
+        "max": 191,
+        "average": 111.5
+      }
+    },
+    {
+      "file_name": "360056090593-optisigns-side-menu-options.md",
+      "total_sections": 8,
+      "headers": {
+        "h1": 1,
+        "h2": 2,
+        "h3": 4,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 555,
+        "average": 180.5
+      }
+    },
+    {
+      "file_name": "360050855313-how-to-link-instagram-business-or-creator-account-to-facebook-account.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 32,
+        "max": 216,
+        "average": 124.0
+      }
+    },
+    {
+      "file_name": "360060284174-how-to-use-youtube-live-schedule-with-optisigns.md",
+      "total_sections": 6,
+      "headers": {
+        "h1": 1,
+        "h2": 4,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 29,
+        "max": 338,
+        "average": 136.16666666666666
+      }
+    },
+    {
+      "file_name": "360063693093-how-to-use-approval-workflow-feature.md",
+      "total_sections": 6,
+      "headers": {
+        "h1": 1,
+        "h2": 2,
+        "h3": 2,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 27,
+        "max": 247,
+        "average": 115.5
+      }
+    },
+    {
+      "file_name": "42915219118739-legacy-datasources.md",
+      "total_sections": 8,
+      "headers": {
+        "h1": 1,
+        "h2": 4,
+        "h3": 2,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 255,
+        "average": 127.0
+      }
+    },
+    {
+      "file_name": "360035739414-how-to-preview-a-screen.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 26,
+        "max": 57,
+        "average": 41.5
+      }
+    },
+    {
+      "file_name": "1500002047642-advanced-how-to-assign-security-for-users-to-only-edit-certain-zones-of-the-scre.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 36,
+        "max": 360,
+        "average": 198.0
+      }
+    },
+    {
+      "file_name": "48626115821459-how-to-use-the-youtube-dashboard-app.md",
+      "total_sections": 9,
+      "headers": {
+        "h1": 1,
+        "h2": 5,
+        "h3": 2,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 241,
+        "average": 94.66666666666667
+      }
+    },
+    {
+      "file_name": "28295074995859-how-to-manage-and-edit-your-playlist-settings.md",
+      "total_sections": 14,
+      "headers": {
+        "h1": 1,
+        "h2": 9,
+        "h3": 1,
+        "h4": 2,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 625,
+        "average": 80.71428571428571
+      }
+    },
+    {
+      "file_name": "1500003244381-about-the-onhold-devices-folder.md",
+      "total_sections": 8,
+      "headers": {
+        "h1": 1,
+        "h2": 3,
+        "h3": 3,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 302,
+        "average": 91.375
+      }
+    },
+    {
+      "file_name": "360040943374-assign-default-content-for-schedules.md",
+      "total_sections": 3,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 1,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 26,
+        "max": 223,
+        "average": 106.0
+      }
+    },
+    {
+      "file_name": "31860170199955-integrating-point-of-sale-pos-systems-to-build-digital-menu-boards-with-optisync.md",
+      "total_sections": 16,
+      "headers": {
+        "h1": 1,
+        "h2": 4,
+        "h3": 7,
+        "h4": 3,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 416,
+        "average": 137.6875
+      }
+    },
+    {
+      "file_name": "360016252394-web-browser-as-optisigns-player.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 20,
+        "max": 26,
+        "average": 23.0
+      }
+    },
+    {
+      "file_name": "31113088917907-how-to-use-toast-api-data-with-optisigns.md",
+      "total_sections": 8,
+      "headers": {
+        "h1": 1,
+        "h2": 5,
+        "h3": 1,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 191,
+        "average": 87.5
+      }
+    },
+    {
+      "file_name": "29238381023123-how-to-clear-cache-on-a-brightsign-player.md",
+      "total_sections": 9,
+      "headers": {
+        "h1": 1,
+        "h2": 2,
+        "h3": 5,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 153,
+        "average": 46.22222222222222
+      }
+    },
+    {
+      "file_name": "4411530012307-how-to-use-microsoft-teams-live-app-with-optisigns.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 30,
+        "max": 291,
+        "average": 160.5
+      }
+    },
+    {
+      "file_name": "42305104960147-animation.md",
+      "total_sections": 10,
+      "headers": {
+        "h1": 1,
+        "h2": 2,
+        "h3": 6,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 567,
+        "average": 142.9
+      }
+    },
+    {
+      "file_name": "360025661053-how-can-i-removedelete-uploaded-files-or-assets.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 29,
+        "max": 73,
+        "average": 51.0
+      }
+    },
+    {
+      "file_name": "1500011891542-how-to-install-optisigns-as-an-apk-file-on-android-devices.md",
+      "total_sections": 9,
+      "headers": {
+        "h1": 1,
+        "h2": 3,
+        "h3": 4,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 23,
+        "max": 181,
+        "average": 82.0
+      }
+    },
+    {
+      "file_name": "34087061669523-amazon-signage-stick.md",
+      "total_sections": 6,
+      "headers": {
+        "h1": 1,
+        "h2": 2,
+        "h3": 2,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 275,
+        "average": 81.16666666666667
+      }
+    },
+    {
+      "file_name": "40147900639891-optistick-troubleshooting-guide.md",
+      "total_sections": 24,
+      "headers": {
+        "h1": 1,
+        "h2": 6,
+        "h3": 14,
+        "h4": 2,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 359,
+        "average": 91.33333333333333
+      }
+    },
+    {
+      "file_name": "360034379693-raspberry-pi.md",
+      "total_sections": 14,
+      "headers": {
+        "h1": 1,
+        "h2": 5,
+        "h3": 7,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 210,
+        "average": 79.42857142857143
+      }
+    },
+    {
+      "file_name": "30304278652563-how-to-use-the-mobile-app-for-remote-control.md",
+      "total_sections": 10,
+      "headers": {
+        "h1": 1,
+        "h2": 5,
+        "h3": 2,
+        "h4": 1,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 12,
+        "max": 107,
+        "average": 52.7
+      }
+    },
+    {
+      "file_name": "28140190892307-how-to-use-qr-overlay-app-in-engage.md",
+      "total_sections": 4,
+      "headers": {
+        "h1": 2,
+        "h2": 1,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 29,
+        "max": 479,
+        "average": 154.75
+      }
+    },
+    {
+      "file_name": "4403616315539-how-to-approve-optisigns-as-enterprise-app-on-microsoft-azure-for-power-bi-calen.md",
+      "total_sections": 5,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 1,
+        "h4": 2,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 41,
+        "max": 226,
+        "average": 123.2
+      }
+    },
+    {
+      "file_name": "360053993934-how-to-use-kiosk-lite-formerly-known-as-interactive-kiosk-app.md",
+      "total_sections": 4,
+      "headers": {
+        "h1": 1,
+        "h2": 2,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 34,
+        "max": 585,
+        "average": 204.5
+      }
+    },
+    {
+      "file_name": "4412065189267-synchronized-playback-sync-play-feature.md",
+      "total_sections": 5,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 3,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 1,
+        "max": 161,
+        "average": 52.0
+      }
+    },
+    {
+      "file_name": "360058936513-advanced-proof-of-play-or-playback-report.md",
+      "total_sections": 4,
+      "headers": {
+        "h1": 1,
+        "h2": 2,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 28,
+        "max": 507,
+        "average": 203.25
+      }
+    },
+    {
+      "file_name": "4407335862931-how-to-use-slack-app.md",
+      "total_sections": 6,
+      "headers": {
+        "h1": 1,
+        "h2": 3,
+        "h3": 1,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 11,
+        "max": 446,
+        "average": 116.66666666666667
+      }
+    },
+    {
+      "file_name": "360049030453-how-to-use-the-motivational-quote-app.md",
+      "total_sections": 3,
+      "headers": {
+        "h1": 1,
+        "h2": 1,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 28,
+        "max": 273,
+        "average": 120.66666666666667
+      }
+    },
+    {
+      "file_name": "42157810188179-customize-text.md",
+      "total_sections": 20,
+      "headers": {
+        "h1": 1,
+        "h2": 3,
+        "h3": 11,
+        "h4": 4,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 442,
+        "average": 92.4
+      }
+    },
+    {
+      "file_name": "20425113117459-navigating-through-optisigns-template-library.md",
+      "total_sections": 8,
+      "headers": {
+        "h1": 1,
+        "h2": 5,
+        "h3": 1,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 117,
+        "average": 66.0
+      }
+    },
+    {
+      "file_name": "360042143753-how-to-re-encode-video-files-for-better-compatibility-on-your-devices.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 32,
+        "max": 194,
+        "average": 113.0
+      }
+    },
+    {
+      "file_name": "360051745633-how-to-set-up-an-instagram-businesscreator-account.md",
+      "total_sections": 4,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 2,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 29,
+        "max": 232,
+        "average": 82.5
+      }
+    },
+    {
+      "file_name": "360060676993-how-to-manually-install-activate-optisigns-ai-add-on-on-linux-or-raspberry-pi.md",
+      "total_sections": 5,
+      "headers": {
+        "h1": 1,
+        "h2": 3,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 31,
+        "max": 165,
+        "average": 86.8
+      }
+    },
+    {
+      "file_name": "12454101966355-how-to-use-the-musthavemenus-app-with-optisigns.md",
+      "total_sections": 4,
+      "headers": {
+        "h1": 1,
+        "h2": 2,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 29,
+        "max": 195,
+        "average": 97.25
+      }
+    },
+    {
+      "file_name": "1500012522362-how-to-use-the-web-scripting-app.md",
+      "total_sections": 10,
+      "headers": {
+        "h1": 1,
+        "h2": 6,
+        "h3": 2,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 346,
+        "average": 127.1
+      }
+    },
+    {
+      "file_name": "4404616139411-add-1-or-multiple-assets-to-many-playlists-at-the-same-time.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 33,
+        "max": 103,
+        "average": 68.0
+      }
+    },
+    {
+      "file_name": "360042424294-how-far-back-or-how-many-posts-will-be-fetched-for-my-social-walls.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 23,
+        "max": 35,
+        "average": 29.0
+      }
+    },
+    {
+      "file_name": "1500009498782-how-to-replaceupdate-an-existing-asset-image-video-documents.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 30,
+        "max": 80,
+        "average": 55.0
+      }
+    },
+    {
+      "file_name": "360016380053-how-to-check-wifi-signal-strength-on-the-amazon-fire-tv-stick.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 33,
+        "max": 50,
+        "average": 41.5
+      }
+    },
+    {
+      "file_name": "360050664913-how-to-use-google-trends-app.md",
+      "total_sections": 4,
+      "headers": {
+        "h1": 1,
+        "h2": 2,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 27,
+        "max": 197,
+        "average": 88.25
+      }
+    },
+    {
+      "file_name": "360051495193-how-to-use-instagram-business-app.md",
+      "total_sections": 4,
+      "headers": {
+        "h1": 1,
+        "h2": 2,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 27,
+        "max": 574,
+        "average": 221.75
+      }
+    },
+    {
+      "file_name": "360016174554-amazon-firestick.md",
+      "total_sections": 6,
+      "headers": {
+        "h1": 1,
+        "h2": 1,
+        "h3": 3,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 32,
+        "max": 342,
+        "average": 127.5
+      }
+    },
+    {
+      "file_name": "25127398699667-how-to-add-a-qr-code-in-designs-using-optisigns-designer.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 32,
+        "max": 232,
+        "average": 132.0
+      }
+    },
+    {
+      "file_name": "360049919933-how-to-use-crypto-index-crypto-exchange-app.md",
+      "total_sections": 4,
+      "headers": {
+        "h1": 1,
+        "h2": 2,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 30,
+        "max": 137,
+        "average": 79.0
+      }
+    },
+    {
+      "file_name": "5119724468371-how-to-use-notion-app.md",
+      "total_sections": 3,
+      "headers": {
+        "h1": 1,
+        "h2": 1,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 26,
+        "max": 112,
+        "average": 73.0
+      }
+    },
+    {
+      "file_name": "360052513253-how-to-use-emergency-messagealert-app.md",
+      "total_sections": 5,
+      "headers": {
+        "h1": 1,
+        "h2": 3,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 27,
+        "max": 379,
+        "average": 167.2
+      }
+    },
+    {
+      "file_name": "22875592994195-how-to-integrate-api-and-publish-api-data-via-optisync.md",
+      "total_sections": 16,
+      "headers": {
+        "h1": 1,
+        "h2": 6,
+        "h3": 6,
+        "h4": 2,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 475,
+        "average": 155.125
+      }
+    },
+    {
+      "file_name": "8099928867475-how-to-get-the-mac-address-on-your-media-player.md",
+      "total_sections": 7,
+      "headers": {
+        "h1": 1,
+        "h2": 1,
+        "h3": 4,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 23,
+        "max": 72,
+        "average": 41.57142857142857
+      }
+    },
+    {
+      "file_name": "6757989639827-how-to-use-the-weather-alert-app.md",
+      "total_sections": 4,
+      "headers": {
+        "h1": 1,
+        "h2": 1,
+        "h3": 1,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 291,
+        "average": 105.0
+      }
+    },
+    {
+      "file_name": "29465595849235-list-of-supported-cities-for-weather-wall-city-themes.md",
+      "total_sections": 3,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 1,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 329,
+        "average": 119.66666666666667
+      }
+    },
+    {
+      "file_name": "360041501494-macos.md",
+      "total_sections": 7,
+      "headers": {
+        "h1": 1,
+        "h2": 3,
+        "h3": 1,
+        "h4": 1,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 183,
+        "average": 43.57142857142857
+      }
+    },
+    {
+      "file_name": "35626165056787-how-to-contact-optisigns-support.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 26,
+        "max": 140,
+        "average": 83.0
+      }
+    },
+    {
+      "file_name": "4472060158355-how-to-get-the-list-of-playlists-where-the-asset-is-used.md",
+      "total_sections": 3,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 1,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 34,
+        "max": 152,
+        "average": 74.66666666666667
+      }
+    },
+    {
+      "file_name": "31960461758611-how-to-order-a-preconfigured-optisigns-android-player-device.md",
+      "total_sections": 6,
+      "headers": {
+        "h1": 1,
+        "h2": 1,
+        "h3": 2,
+        "h4": 1,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 97,
+        "average": 43.666666666666664
+      }
+    },
+    {
+      "file_name": "6604468198291-how-to-use-the-cap-alert-app.md",
+      "total_sections": 10,
+      "headers": {
+        "h1": 1,
+        "h2": 3,
+        "h3": 4,
+        "h4": 1,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 582,
+        "average": 170.5
+      }
+    },
+    {
+      "file_name": "360061576673-advanced-enforce-sso-login-for-your-account.md",
+      "total_sections": 6,
+      "headers": {
+        "h1": 1,
+        "h2": 2,
+        "h3": 2,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 139,
+        "average": 62.166666666666664
+      }
+    },
+    {
+      "file_name": "360044613874-how-to-use-the-guardian-app.md",
+      "total_sections": 6,
+      "headers": {
+        "h1": 1,
+        "h2": 3,
+        "h3": 1,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 258,
+        "average": 72.33333333333333
+      }
+    },
+    {
+      "file_name": "360016342373-what-types-of-files-are-supported.md",
+      "total_sections": 4,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 2,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 27,
+        "max": 166,
+        "average": 85.75
+      }
+    },
+    {
+      "file_name": "29217646663187-how-to-set-up-dynamic-data-mapping-with-optisync.md",
+      "total_sections": 12,
+      "headers": {
+        "h1": 1,
+        "h2": 6,
+        "h3": 3,
+        "h4": 1,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 603,
+        "average": 175.0
+      }
+    },
+    {
+      "file_name": "360042143333-roku-release-notes-limitation.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 28,
+        "max": 288,
+        "average": 158.0
+      }
+    },
+    {
+      "file_name": "4408658251027-how-to-use-remote-command-execution-windowslinux.md",
+      "total_sections": 7,
+      "headers": {
+        "h1": 1,
+        "h2": 3,
+        "h3": 2,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 313,
+        "average": 80.71428571428571
+      }
+    },
+    {
+      "file_name": "360019588654-how-to-tell-which-dropbox-account-that-i-linked-to-optisigns.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 32,
+        "max": 53,
+        "average": 42.5
+      }
+    },
+    {
+      "file_name": "17639078588691-how-to-cancel-subscription-or-pause-subscription-for-seasonal-use-case.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 32,
+        "max": 418,
+        "average": 225.0
+      }
+    },
+    {
+      "file_name": "360036250853-how-to-use-microsoft-outlook-calendar-with-optisigns.md",
+      "total_sections": 11,
+      "headers": {
+        "h1": 1,
+        "h2": 4,
+        "h3": 1,
+        "h4": 4,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 291,
+        "average": 109.72727272727273
+      }
+    },
+    {
+      "file_name": "4414558369811-pagination.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 22,
+        "max": 179,
+        "average": 100.5
+      }
+    },
+    {
+      "file_name": "1500000493782-billing-how-do-i-change-my-subscription-plan.md",
+      "total_sections": 7,
+      "headers": {
+        "h1": 1,
+        "h2": 2,
+        "h3": 2,
+        "h4": 1,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 200,
+        "average": 69.57142857142857
+      }
+    },
+    {
+      "file_name": "360016484473-why-does-my-screen-show-as-offline-on-the-web-portal.md",
+      "total_sections": 3,
+      "headers": {
+        "h1": 1,
+        "h2": 1,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 23,
+        "max": 101,
+        "average": 52.0
+      }
+    },
+    {
+      "file_name": "360047499893-how-to-use-google-traffic-app.md",
+      "total_sections": 4,
+      "headers": {
+        "h1": 1,
+        "h2": 2,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 27,
+        "max": 161,
+        "average": 77.25
+      }
+    },
+    {
+      "file_name": "6086986017299-how-to-use-optisigns-screen-capture-app.md",
+      "total_sections": 8,
+      "headers": {
+        "h1": 1,
+        "h2": 1,
+        "h3": 5,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 114,
+        "average": 50.0
+      }
+    },
+    {
+      "file_name": "4404616314515-how-to-change-account-owners.md",
+      "total_sections": 5,
+      "headers": {
+        "h1": 1,
+        "h2": 1,
+        "h3": 2,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 15,
+        "max": 89,
+        "average": 42.8
+      }
+    },
+    {
+      "file_name": "360023848334-how-to-use-the-facebook-page-app.md",
+      "total_sections": 8,
+      "headers": {
+        "h1": 1,
+        "h2": 3,
+        "h3": 3,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 344,
+        "average": 105.625
+      }
+    },
+    {
+      "file_name": "360034379293-windows.md",
+      "total_sections": 6,
+      "headers": {
+        "h1": 1,
+        "h2": 3,
+        "h3": 1,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 160,
+        "average": 47.333333333333336
+      }
+    },
+    {
+      "file_name": "4414563797139-generate-manage-optisigns-api-key.md",
+      "total_sections": 4,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 2,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 27,
+        "max": 55,
+        "average": 45.0
+      }
+    },
+    {
+      "file_name": "4414553099667-graphql-api-tutorial-pair-and-assign-content-to-screen.md",
+      "total_sections": 4,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 2,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 30,
+        "max": 139,
+        "average": 78.75
+      }
+    },
+    {
+      "file_name": "1500008112642-how-to-install-optisigns-player-on-android-boxes.md",
+      "total_sections": 5,
+      "headers": {
+        "h1": 1,
+        "h2": 1,
+        "h3": 2,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 25,
+        "max": 167,
+        "average": 76.2
+      }
+    },
+    {
+      "file_name": "4407386819731-how-to-set-up-saml-20-with-optisigns-and-onelogin.md",
+      "total_sections": 5,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 2,
+        "h4": 1,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 31,
+        "max": 513,
+        "average": 205.2
+      }
+    },
+    {
+      "file_name": "4404879296403-how-to-clean-data-on-the-optisigns-android-stick.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 30,
+        "max": 72,
+        "average": 51.0
+      }
+    },
+    {
+      "file_name": "360056627833-how-to-connect-to-wifi-for-raspberry-pi.md",
+      "total_sections": 3,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 1,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 29,
+        "max": 163,
+        "average": 78.33333333333333
+      }
+    },
+    {
+      "file_name": "360046356113-advanced-security-managing-user-roles.md",
+      "total_sections": 9,
+      "headers": {
+        "h1": 1,
+        "h2": 5,
+        "h3": 2,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 214,
+        "average": 107.0
+      }
+    },
+    {
+      "file_name": "52069065128723-connect-zoom-rooms-to-optisigns-digital-signage.md",
+      "total_sections": 18,
+      "headers": {
+        "h1": 1,
+        "h2": 14,
+        "h3": 2,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 8,
+        "max": 276,
+        "average": 80.33333333333333
+      }
+    },
+    {
+      "file_name": "17112492659475-display-powerpointgoogle-slides-in-whole-screen-when-casting-from-macbook-pro.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 32,
+        "max": 185,
+        "average": 108.5
+      }
+    },
+    {
+      "file_name": "27267311796243-optistick.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 22,
+        "max": 841,
+        "average": 431.5
+      }
+    },
+    {
+      "file_name": "360055328454-how-to-enabledisable-auto-update-for-optisigns-app-on-fire-tv.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 32,
+        "max": 116,
+        "average": 74.0
+      }
+    },
+    {
+      "file_name": "36911639377683-how-to-use-optisigns-with-microsoft-teams-rooms.md",
+      "total_sections": 8,
+      "headers": {
+        "h1": 1,
+        "h2": 4,
+        "h3": 2,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 235,
+        "average": 102.875
+      }
+    },
+    {
+      "file_name": "36558834998291-tutorial-creating-schedules-and-adding-schedule-items-using-graphql.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 30,
+        "max": 359,
+        "average": 194.5
+      }
+    },
+    {
+      "file_name": "18381542133779-how-to-configure-multi-factor-authentication-with-your-optisigns-account.md",
+      "total_sections": 5,
+      "headers": {
+        "h1": 1,
+        "h2": 1,
+        "h3": 0,
+        "h4": 2,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 30,
+        "max": 81,
+        "average": 57.8
+      }
+    },
+    {
+      "file_name": "14502378549907-present-share-your-screen-with-optisigns-aericast-add-on.md",
+      "total_sections": 4,
+      "headers": {
+        "h1": 1,
+        "h2": 1,
+        "h3": 1,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 31,
+        "max": 144,
+        "average": 70.25
+      }
+    },
+    {
+      "file_name": "360016833514-changing-screens-orientation-portrait-landscape.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 27,
+        "max": 94,
+        "average": 60.5
+      }
+    },
+    {
+      "file_name": "360055546594-how-does-pre-configured-devices-labeled-in-shipping-package.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 29,
+        "max": 79,
+        "average": 54.0
+      }
+    },
+    {
+      "file_name": "360036465673-adjusting-social-news-wall-speeds.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 26,
+        "max": 27,
+        "average": 26.5
+      }
+    },
+    {
+      "file_name": "36562094987795-tutorial-creating-or-updating-website-assets-using-graphql.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 29,
+        "max": 199,
+        "average": 114.0
+      }
+    },
+    {
+      "file_name": "1500001561861-how-to-mix-playlists-and-maintain-screen-time-share-with-optisigns-content-rotat.md",
+      "total_sections": 4,
+      "headers": {
+        "h1": 1,
+        "h2": 2,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 35,
+        "max": 296,
+        "average": 173.0
+      }
+    },
+    {
+      "file_name": "360049518313-how-to-use-google-drive-app.md",
+      "total_sections": 4,
+      "headers": {
+        "h1": 1,
+        "h2": 2,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 27,
+        "max": 294,
+        "average": 166.75
+      }
+    },
+    {
+      "file_name": "47616485609491-how-to-use-the-optidev-app.md",
+      "total_sections": 7,
+      "headers": {
+        "h1": 1,
+        "h2": 3,
+        "h3": 2,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 319,
+        "average": 87.71428571428571
+      }
+    },
+    {
+      "file_name": "48241081473043-operational-schedule-troubleshooting.md",
+      "total_sections": 10,
+      "headers": {
+        "h1": 1,
+        "h2": 6,
+        "h3": 2,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 319,
+        "average": 120.7
+      }
+    },
+    {
+      "file_name": "1500010436341-adjust-the-gpu-memory-on-the-raspberry-pi.md",
+      "total_sections": 4,
+      "headers": {
+        "h1": 1,
+        "h2": 1,
+        "h3": 1,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 29,
+        "max": 51,
+        "average": 38.5
+      }
+    },
+    {
+      "file_name": "360050665253-how-to-use-the-onedrive-app.md",
+      "total_sections": 5,
+      "headers": {
+        "h1": 1,
+        "h2": 2,
+        "h3": 1,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 27,
+        "max": 309,
+        "average": 162.0
+      }
+    },
+    {
+      "file_name": "23566927217939-how-to-use-check-in-app-with-sms-follow-up.md",
+      "total_sections": 4,
+      "headers": {
+        "h1": 1,
+        "h2": 1,
+        "h3": 0,
+        "h4": 1,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 30,
+        "max": 927,
+        "average": 276.25
+      }
+    },
+    {
+      "file_name": "360016494933-how-to-use-imovie-content-with-optisigns.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 28,
+        "max": 158,
+        "average": 93.0
+      }
+    },
+    {
+      "file_name": "360053211594-set-optisigns-as-screensaver-on-windows.md",
+      "total_sections": 3,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 1,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 27,
+        "max": 320,
+        "average": 132.33333333333334
+      }
+    },
+    {
+      "file_name": "360050244454-how-to-use-trello-app.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 26,
+        "max": 127,
+        "average": 76.5
+      }
+    },
+    {
+      "file_name": "48751096814995-how-to-use-the-google-ads-dashboard-app.md",
+      "total_sections": 9,
+      "headers": {
+        "h1": 1,
+        "h2": 5,
+        "h3": 2,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 246,
+        "average": 97.0
+      }
+    },
+    {
+      "file_name": "360056086653-how-to-change-time-zone-on-your-fire-stick-device.md",
+      "total_sections": 3,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 1,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 31,
+        "max": 115,
+        "average": 66.33333333333333
+      }
+    },
+    {
+      "file_name": "360041570153-my-image-content-are-bleeding-off-the-screens-with-windows-linux-mac-raspberry-p.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 39,
+        "max": 76,
+        "average": 57.5
+      }
+    },
+    {
+      "file_name": "48656950622227-how-to-use-the-google-search-console-app.md",
+      "total_sections": 9,
+      "headers": {
+        "h1": 1,
+        "h2": 5,
+        "h3": 2,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 246,
+        "average": 97.55555555555556
+      }
+    },
+    {
+      "file_name": "360044115513-how-to-use-the-stock-app.md",
+      "total_sections": 9,
+      "headers": {
+        "h1": 1,
+        "h2": 3,
+        "h3": 4,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 143,
+        "average": 54.888888888888886
+      }
+    },
+    {
+      "file_name": "24338756617747-what-are-feeds-and-how-to-use-it.md",
+      "total_sections": 7,
+      "headers": {
+        "h1": 1,
+        "h2": 4,
+        "h3": 1,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 199,
+        "average": 76.42857142857143
+      }
+    },
+    {
+      "file_name": "18470994953363-how-to-keep-optisigns-running-on-fire-stick.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 29,
+        "max": 114,
+        "average": 71.5
+      }
+    },
+    {
+      "file_name": "360042450514-how-to-use-world-clock-app.md",
+      "total_sections": 4,
+      "headers": {
+        "h1": 1,
+        "h2": 2,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 24,
+        "max": 135,
+        "average": 67.0
+      }
+    },
+    {
+      "file_name": "360049159814-how-to-use-wallsio-app.md",
+      "total_sections": 4,
+      "headers": {
+        "h1": 1,
+        "h2": 2,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 26,
+        "max": 141,
+        "average": 77.25
+      }
+    },
+    {
+      "file_name": "360034219593-powerpoint-transition-and-animation-effect.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 26,
+        "max": 83,
+        "average": 54.5
+      }
+    },
+    {
+      "file_name": "1500001985341-how-to-use-the-local-folder-app-in-optisigns.md",
+      "total_sections": 9,
+      "headers": {
+        "h1": 1,
+        "h2": 1,
+        "h3": 6,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 332,
+        "average": 121.22222222222223
+      }
+    },
+    {
+      "file_name": "4406180781203-how-to-use-linkedin-app.md",
+      "total_sections": 4,
+      "headers": {
+        "h1": 1,
+        "h2": 2,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 26,
+        "max": 407,
+        "average": 156.25
+      }
+    },
+    {
+      "file_name": "44669013147923-kiosk32.md",
+      "total_sections": 17,
+      "headers": {
+        "h1": 1,
+        "h2": 4,
+        "h3": 6,
+        "h4": 5,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 1,
+        "max": 361,
+        "average": 115.70588235294117
+      }
+    },
+    {
+      "file_name": "4414558392339-api-reference.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 21,
+        "max": 23,
+        "average": 22.0
+      }
+    },
+    {
+      "file_name": "40671590645651-how-to-play-licensed-background-music-on-digital-signs-with-optisound.md",
+      "total_sections": 10,
+      "headers": {
+        "h1": 1,
+        "h2": 4,
+        "h3": 4,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 143,
+        "average": 72.7
+      }
+    },
+    {
+      "file_name": "27607906766483-how-to-fix-the-scaling-issue-on-optisigns-android-device.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 31,
+        "max": 151,
+        "average": 91.0
+      }
+    },
+    {
+      "file_name": "29863080711059-how-to-add-a-microsoft-365-excel-spreadsheet-as-a-datasource-for-optisync.md",
+      "total_sections": 7,
+      "headers": {
+        "h1": 1,
+        "h2": 2,
+        "h3": 1,
+        "h4": 2,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 349,
+        "average": 85.0
+      }
+    },
+    {
+      "file_name": "360050665413-how-to-use-dropbox-app.md",
+      "total_sections": 4,
+      "headers": {
+        "h1": 1,
+        "h2": 2,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 26,
+        "max": 275,
+        "average": 164.5
+      }
+    },
+    {
+      "file_name": "4407068788883-map-view-screen-location-settings.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 27,
+        "max": 90,
+        "average": 58.5
+      }
+    },
+    {
+      "file_name": "360016253574-how-do-i-suggest-new-features-improvement.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 28,
+        "max": 28,
+        "average": 28.0
+      }
+    },
+    {
+      "file_name": "35577511423635-optisigns-pro-player-advanced-features.md",
+      "total_sections": 15,
+      "headers": {
+        "h1": 1,
+        "h2": 5,
+        "h3": 8,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 353,
+        "average": 103.93333333333334
+      }
+    },
+    {
+      "file_name": "360055486554-remotely-control-and-command-optisigns-devices.md",
+      "total_sections": 20,
+      "headers": {
+        "h1": 1,
+        "h2": 3,
+        "h3": 15,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 319,
+        "average": 80.95
+      }
+    },
+    {
+      "file_name": "4414355658899-how-to-use-microsoft-powerpoint-with-optisigns.md",
+      "total_sections": 14,
+      "headers": {
+        "h1": 1,
+        "h2": 6,
+        "h3": 6,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 206,
+        "average": 62.42857142857143
+      }
+    },
+    {
+      "file_name": "4407476403859-how-to-set-up-saml-20-with-optisigns-and-oneloginshibboleth.md",
+      "total_sections": 5,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 2,
+        "h4": 1,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 31,
+        "max": 517,
+        "average": 224.2
+      }
+    },
+    {
+      "file_name": "28427819992979-performancestability-issues-on-android-devices-and-best-practices.md",
+      "total_sections": 4,
+      "headers": {
+        "h1": 1,
+        "h2": 2,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 29,
+        "max": 222,
+        "average": 131.0
+      }
+    },
+    {
+      "file_name": "4403015887763-moderate-your-social-media-feeds.md",
+      "total_sections": 3,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 1,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 26,
+        "max": 139,
+        "average": 77.33333333333333
+      }
+    },
+    {
+      "file_name": "7589195635219-using-eyedrop-feature-to-select-color-in-designer-app.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 30,
+        "max": 83,
+        "average": 56.5
+      }
+    },
+    {
+      "file_name": "8098889840531-how-to-use-rtsp-streams-on-optisigns-devices.md",
+      "total_sections": 5,
+      "headers": {
+        "h1": 1,
+        "h2": 1,
+        "h3": 1,
+        "h4": 1,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 113,
+        "average": 49.0
+      }
+    },
+    {
+      "file_name": "4416542923667-how-to-perform-mass-provisioning-with-optisigns.md",
+      "total_sections": 12,
+      "headers": {
+        "h1": 1,
+        "h2": 2,
+        "h3": 8,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 375,
+        "average": 93.25
+      }
+    },
+    {
+      "file_name": "23629657318547-how-to-get-google-review-link.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 27,
+        "max": 107,
+        "average": 67.0
+      }
+    },
+    {
+      "file_name": "360044600474-folder-level-permissions.md",
+      "total_sections": 11,
+      "headers": {
+        "h1": 1,
+        "h2": 2,
+        "h3": 5,
+        "h4": 2,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 280,
+        "average": 106.0
+      }
+    },
+    {
+      "file_name": "28295104605843-how-to-create-use-playlists.md",
+      "total_sections": 6,
+      "headers": {
+        "h1": 1,
+        "h2": 3,
+        "h3": 1,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 386,
+        "average": 106.0
+      }
+    },
+    {
+      "file_name": "17342932920211-event-logging-and-analytics-for-external-communicationrs-232.md",
+      "total_sections": 5,
+      "headers": {
+        "h1": 1,
+        "h2": 2,
+        "h3": 1,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 28,
+        "max": 410,
+        "average": 150.0
+      }
+    },
+    {
+      "file_name": "20428606424723-how-to-use-coordinate-based-positioning-and-sizing-of-elements-in-optisigns-desi.md",
+      "total_sections": 4,
+      "headers": {
+        "h1": 2,
+        "h2": 1,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 23,
+        "max": 297,
+        "average": 97.5
+      }
+    },
+    {
+      "file_name": "28115946505107-how-to-change-close-nav-bar-styler-preferences.md",
+      "total_sections": 3,
+      "headers": {
+        "h1": 1,
+        "h2": 1,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 29,
+        "max": 246,
+        "average": 101.66666666666667
+      }
+    },
+    {
+      "file_name": "35184720136595-how-to-install-a-root-certificate-and-display-an-internal-website-on-screens.md",
+      "total_sections": 18,
+      "headers": {
+        "h1": 1,
+        "h2": 6,
+        "h3": 10,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 324,
+        "average": 100.88888888888889
+      }
+    },
+    {
+      "file_name": "27463953562899-amazon-tv-firestick-troubleshooting-guide.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 27,
+        "max": 555,
+        "average": 291.0
+      }
+    },
+    {
+      "file_name": "1500000941981-how-to-allow-the-optisigns-app-to-access-local-storage-on-a-fire-stick.md",
+      "total_sections": 3,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 1,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 35,
+        "max": 103,
+        "average": 70.66666666666667
+      }
+    },
+    {
+      "file_name": "360044614514-theres-no-sounds-output-for-my-raspberry-pi.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 29,
+        "max": 161,
+        "average": 95.0
+      }
+    },
+    {
+      "file_name": "360016247974-how-to-upload-manage-your-files-assets.md",
+      "total_sections": 11,
+      "headers": {
+        "h1": 1,
+        "h2": 9,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 72,
+        "average": 39.18181818181818
+      }
+    },
+    {
+      "file_name": "9392587446675-how-to-use-airtable-with-optisigns.md",
+      "total_sections": 4,
+      "headers": {
+        "h1": 1,
+        "h2": 2,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 27,
+        "max": 159,
+        "average": 73.25
+      }
+    },
+    {
+      "file_name": "4407252213395-how-to-set-up-saml-20-with-optisigns-and-ms-entra-id-formerly-azure-ad.md",
+      "total_sections": 18,
+      "headers": {
+        "h1": 1,
+        "h2": 5,
+        "h3": 6,
+        "h4": 5,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 304,
+        "average": 116.27777777777777
+      }
+    },
+    {
+      "file_name": "360051014773-show-youtube-videos-subtitleclosed-caption.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 26,
+        "max": 49,
+        "average": 37.5
+      }
+    },
+    {
+      "file_name": "360049155994-how-to-use-market-index-app.md",
+      "total_sections": 4,
+      "headers": {
+        "h1": 1,
+        "h2": 2,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 27,
+        "max": 143,
+        "average": 82.75
+      }
+    },
+    {
+      "file_name": "4416704273811-manually-control-playlist-playback-with-optisigns.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 27,
+        "max": 255,
+        "average": 141.0
+      }
+    },
+    {
+      "file_name": "11116333259283-setting-up-your-samsung-smart-signage-platform-sssp-commercial-grade.md",
+      "total_sections": 10,
+      "headers": {
+        "h1": 1,
+        "h2": 4,
+        "h3": 3,
+        "h4": 1,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 560,
+        "average": 118.4
+      }
+    },
+    {
+      "file_name": "29979283289235-how-to-display-birthday-lists-with-optisync-data-mapping-and-google-sheets.md",
+      "total_sections": 15,
+      "headers": {
+        "h1": 1,
+        "h2": 6,
+        "h3": 5,
+        "h4": 2,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 163,
+        "average": 96.73333333333333
+      }
+    },
+    {
+      "file_name": "360020931734-can-i-disable-the-download-button-for-assets.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 29,
+        "max": 106,
+        "average": 67.5
+      }
+    },
+    {
+      "file_name": "4404608957075-how-to-delete-your-account-from-optisigns.md",
+      "total_sections": 3,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 1,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 28,
+        "max": 108,
+        "average": 58.666666666666664
+      }
+    },
+    {
+      "file_name": "360034379573-linux.md",
+      "total_sections": 10,
+      "headers": {
+        "h1": 1,
+        "h2": 3,
+        "h3": 5,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 200,
+        "average": 82.3
+      }
+    },
+    {
+      "file_name": "360051317774-how-to-use-facebook-recommendations-app.md",
+      "total_sections": 4,
+      "headers": {
+        "h1": 1,
+        "h2": 2,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 27,
+        "max": 258,
+        "average": 106.5
+      }
+    },
+    {
+      "file_name": "32860569148819-how-to-set-up-a-power-bi-service-principal-for-use-in-optisigns.md",
+      "total_sections": 9,
+      "headers": {
+        "h1": 1,
+        "h2": 4,
+        "h3": 3,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 248,
+        "average": 108.44444444444444
+      }
+    },
+    {
+      "file_name": "360021856013-use-your-macwindows-device-as-a-test-screen.md",
+      "total_sections": 3,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 1,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 95,
+        "average": 41.333333333333336
+      }
+    },
+    {
+      "file_name": "1500009343862-how-to-use-the-taggbox-display-app-with-optisigns.md",
+      "total_sections": 4,
+      "headers": {
+        "h1": 1,
+        "h2": 2,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 30,
+        "max": 178,
+        "average": 83.0
+      }
+    },
+    {
+      "file_name": "11784310183571-how-to-use-waitwhile-app.md",
+      "total_sections": 3,
+      "headers": {
+        "h1": 1,
+        "h2": 1,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 26,
+        "max": 342,
+        "average": 149.66666666666666
+      }
+    },
+    {
+      "file_name": "23274673797139-how-to-enable-auto-start-on-fireos-8-devices-like-amazon-fire-tv-stick-4k-gen-2.md",
+      "total_sections": 6,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 4,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 31,
+        "max": 188,
+        "average": 91.83333333333333
+      }
+    },
+    {
+      "file_name": "360049156234-how-to-use-currency-exchange-app.md",
+      "total_sections": 4,
+      "headers": {
+        "h1": 1,
+        "h2": 2,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 25,
+        "max": 150,
+        "average": 71.0
+      }
+    },
+    {
+      "file_name": "4408946045715-how-to-integrate-bonusly-digital-signage-with-optisigns.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 29,
+        "max": 210,
+        "average": 119.5
+      }
+    },
+    {
+      "file_name": "18399492388371-how-to-customize-the-thumbnail-of-files-assets-and-folders.md",
+      "total_sections": 6,
+      "headers": {
+        "h1": 1,
+        "h2": 2,
+        "h3": 0,
+        "h4": 2,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 79,
+        "average": 31.0
+      }
+    },
+    {
+      "file_name": "360063098753-how-to-mass-deploy-optisigns-on-raspberry-pi-devices.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 30,
+        "max": 122,
+        "average": 76.0
+      }
+    },
+    {
+      "file_name": "42436941395475-widgets-in-designer.md",
+      "total_sections": 17,
+      "headers": {
+        "h1": 1,
+        "h2": 13,
+        "h3": 2,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 364,
+        "average": 162.58823529411765
+      }
+    },
+    {
+      "file_name": "17882306279315-samsung-smart-signage-platform-sssp-supported-model-list.md",
+      "total_sections": 5,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 3,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 27,
+        "max": 112,
+        "average": 53.0
+      }
+    },
+    {
+      "file_name": "360016219114-what-if-i-want-to-increase-decrease-number-of-screens-during-the-month.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 34,
+        "max": 117,
+        "average": 75.5
+      }
+    },
+    {
+      "file_name": "4411762539027-multilingual-and-multi-currency.md",
+      "total_sections": 5,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 3,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 143,
+        "average": 47.8
+      }
+    },
+    {
+      "file_name": "27676133574547-i-received-the-optisigns-device-but-its-onhold-and-cannot-assign-content.md",
+      "total_sections": 5,
+      "headers": {
+        "h1": 1,
+        "h2": 3,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 102,
+        "average": 44.0
+      }
+    },
+    {
+      "file_name": "18988049363859-push-contents-to-your-screens.md",
+      "total_sections": 11,
+      "headers": {
+        "h1": 1,
+        "h2": 3,
+        "h3": 4,
+        "h4": 2,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 23,
+        "max": 111,
+        "average": 55.0
+      }
+    },
+    {
+      "file_name": "28598173096723-how-to-create-and-use-operational-schedules-hdmi-cec-rs-232.md",
+      "total_sections": 8,
+      "headers": {
+        "h1": 1,
+        "h2": 3,
+        "h3": 3,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 477,
+        "average": 142.375
+      }
+    },
+    {
+      "file_name": "1500009937122-resolve-autostart-issues-on-your-android-tv-devices.md",
+      "total_sections": 4,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 2,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 29,
+        "max": 54,
+        "average": 39.0
+      }
+    },
+    {
+      "file_name": "14726570281875-how-to-install-optisigns-on-samsung-tizen-smart-tvs.md",
+      "total_sections": 8,
+      "headers": {
+        "h1": 1,
+        "h2": 1,
+        "h3": 5,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 30,
+        "max": 157,
+        "average": 59.75
+      }
+    },
+    {
+      "file_name": "4417940565139-how-to-display-microsoft-teams-on-optisigns.md",
+      "total_sections": 5,
+      "headers": {
+        "h1": 1,
+        "h2": 1,
+        "h3": 2,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 28,
+        "max": 338,
+        "average": 100.0
+      }
+    },
+    {
+      "file_name": "39080869746067-handle-oauth-authentication-using-api-gateway-pre-request-configuration.md",
+      "total_sections": 4,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 2,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 235,
+        "average": 71.75
+      }
+    },
+    {
+      "file_name": "4407128433299-saml-integration-strategies-best-practices.md",
+      "total_sections": 7,
+      "headers": {
+        "h1": 1,
+        "h2": 2,
+        "h3": 0,
+        "h4": 3,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 292,
+        "average": 122.57142857142857
+      }
+    },
+    {
+      "file_name": "38062664690195-tagging-in-optisigns.md",
+      "total_sections": 14,
+      "headers": {
+        "h1": 1,
+        "h2": 3,
+        "h3": 9,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 201,
+        "average": 104.57142857142857
+      }
+    },
+    {
+      "file_name": "360041222994-how-to-use-the-countup-app.md",
+      "total_sections": 8,
+      "headers": {
+        "h1": 1,
+        "h2": 2,
+        "h3": 4,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 350,
+        "average": 105.875
+      }
+    },
+    {
+      "file_name": "23565267463315-engage-plan-faqs.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 27,
+        "max": 307,
+        "average": 167.0
+      }
+    },
+    {
+      "file_name": "360048914673-edit-screen-what-does-each-option-do.md",
+      "total_sections": 13,
+      "headers": {
+        "h1": 1,
+        "h2": 10,
+        "h3": 1,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 316,
+        "average": 116.23076923076923
+      }
+    },
+    {
+      "file_name": "360052088413-how-to-use-the-data-studio-app.md",
+      "total_sections": 7,
+      "headers": {
+        "h1": 1,
+        "h2": 3,
+        "h3": 2,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 265,
+        "average": 83.14285714285714
+      }
+    },
+    {
+      "file_name": "34379983350163-accepted-payment-methods.md",
+      "total_sections": 3,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 1,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 24,
+        "max": 170,
+        "average": 103.0
+      }
+    },
+    {
+      "file_name": "12498801963027-show-offline-indicator-feature.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 25,
+        "max": 74,
+        "average": 49.5
+      }
+    },
+    {
+      "file_name": "4410655948563-how-to-use-livestreamcom-app.md",
+      "total_sections": 4,
+      "headers": {
+        "h1": 1,
+        "h2": 2,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 26,
+        "max": 131,
+        "average": 64.5
+      }
+    },
+    {
+      "file_name": "9169378546195-data-residency-and-optisigns.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 25,
+        "max": 138,
+        "average": 81.5
+      }
+    },
+    {
+      "file_name": "360035538093-my-image-content-are-bleeding-off-the-screens-with-fire-tv-need-screen-calibrati.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 35,
+        "max": 181,
+        "average": 108.0
+      }
+    },
+    {
+      "file_name": "4403332894867-how-to-set-up-audit-log-for-your-account.md",
+      "total_sections": 3,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 1,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 30,
+        "max": 257,
+        "average": 107.33333333333333
+      }
+    },
+    {
+      "file_name": "360043670633-organizing-your-files-assets-playlists-and-schedules-by-using-folders.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 31,
+        "max": 106,
+        "average": 68.5
+      }
+    },
+    {
+      "file_name": "31449657955347-getting-started-with-touch-screen-kiosks.md",
+      "total_sections": 15,
+      "headers": {
+        "h1": 1,
+        "h2": 4,
+        "h3": 8,
+        "h4": 1,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 249,
+        "average": 99.8
+      }
+    },
+    {
+      "file_name": "360041476213-how-to-use-the-cnn-news-app.md",
+      "total_sections": 6,
+      "headers": {
+        "h1": 1,
+        "h2": 3,
+        "h3": 1,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 255,
+        "average": 71.5
+      }
+    },
+    {
+      "file_name": "360047232054-amazon-fire-stick-and-security-considerations.md",
+      "total_sections": 5,
+      "headers": {
+        "h1": 1,
+        "h2": 3,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 13,
+        "max": 462,
+        "average": 147.4
+      }
+    },
+    {
+      "file_name": "30003143806099-how-to-use-the-optisigns-mobile-admin-app.md",
+      "total_sections": 25,
+      "headers": {
+        "h1": 1,
+        "h2": 9,
+        "h3": 5,
+        "h4": 9,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 241,
+        "average": 55.92
+      }
+    },
+    {
+      "file_name": "360034883113-working-with-teams-and-security-levels.md",
+      "total_sections": 8,
+      "headers": {
+        "h1": 1,
+        "h2": 6,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 22,
+        "max": 298,
+        "average": 85.0
+      }
+    },
+    {
+      "file_name": "360040991534-how-to-use-the-techcrunch-news-app.md",
+      "total_sections": 6,
+      "headers": {
+        "h1": 1,
+        "h2": 3,
+        "h3": 1,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 252,
+        "average": 71.83333333333333
+      }
+    },
+    {
+      "file_name": "360025626853-how-to-start-optisigns-automatically-when-devices-boot-up.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 30,
+        "max": 59,
+        "average": 44.5
+      }
+    },
+    {
+      "file_name": "52350277262483-connect-microsoft-teams-rooms-to-optisigns-digital-signage.md",
+      "total_sections": 19,
+      "headers": {
+        "h1": 3,
+        "h2": 7,
+        "h3": 8,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 20,
+        "max": 243,
+        "average": 85.15789473684211
+      }
+    },
+    {
+      "file_name": "1500000480302-advanced-custom-domain-mapping.md",
+      "total_sections": 4,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 2,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 19,
+        "max": 364,
+        "average": 114.75
+      }
+    },
+    {
+      "file_name": "360039566974-how-to-install-optisigns-as-channelapp-on-roku.md",
+      "total_sections": 9,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 2,
+        "h4": 5,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 20,
+        "max": 84,
+        "average": 47.333333333333336
+      }
+    },
+    {
+      "file_name": "11032964830227-how-to-use-mondaycom-app.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 26,
+        "max": 137,
+        "average": 81.5
+      }
+    },
+    {
+      "file_name": "360016374813-set-up-add-a-screen.md",
+      "total_sections": 7,
+      "headers": {
+        "h1": 1,
+        "h2": 2,
+        "h3": 0,
+        "h4": 3,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 131,
+        "average": 48.42857142857143
+      }
+    },
+    {
+      "file_name": "360016252654-does-optisigns-offer-non-profiteducation-discount.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 26,
+        "max": 114,
+        "average": 70.0
+      }
+    },
+    {
+      "file_name": "22474034993043-advanced-playlist-item-playback-control-campaign-management.md",
+      "total_sections": 6,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 4,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 29,
+        "max": 402,
+        "average": 228.5
+      }
+    },
+    {
+      "file_name": "32839794222099-display-salesforce-dashboards-with-mfa-using-web-scripting.md",
+      "total_sections": 5,
+      "headers": {
+        "h1": 1,
+        "h2": 2,
+        "h3": 0,
+        "h4": 1,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 249,
+        "average": 90.6
+      }
+    },
+    {
+      "file_name": "15808407287315-the-optisigns-app-keeps-turning-on-the-tv-screen.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 30,
+        "max": 120,
+        "average": 75.0
+      }
+    },
+    {
+      "file_name": "1500000485202-custom-branding-settings.md",
+      "total_sections": 7,
+      "headers": {
+        "h1": 1,
+        "h2": 3,
+        "h3": 2,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 284,
+        "average": 98.42857142857143
+      }
+    },
+    {
+      "file_name": "42087942047379-getting-started-with-designer.md",
+      "total_sections": 31,
+      "headers": {
+        "h1": 1,
+        "h2": 7,
+        "h3": 20,
+        "h4": 2,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 221,
+        "average": 73.87096774193549
+      }
+    },
+    {
+      "file_name": "21708242980755-how-to-share-playlist-and-folder-with-external-users.md",
+      "total_sections": 6,
+      "headers": {
+        "h1": 2,
+        "h2": 3,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 442,
+        "average": 120.5
+      }
+    },
+    {
+      "file_name": "360016485633-how-can-i-remotely-startrestart-optisigns-app-on-fire-tv.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 31,
+        "max": 225,
+        "average": 128.0
+      }
+    },
+    {
+      "file_name": "360043621953-how-to-create-and-use-nested-playlists.md",
+      "total_sections": 4,
+      "headers": {
+        "h1": 1,
+        "h2": 2,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 224,
+        "average": 90.5
+      }
+    },
+    {
+      "file_name": "21449362442003-update-optisigns-player-on-optisigns-pro-player-gen-2-via-script.md",
+      "total_sections": 3,
+      "headers": {
+        "h1": 1,
+        "h2": 1,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 28,
+        "max": 156,
+        "average": 72.0
+      }
+    },
+    {
+      "file_name": "46299245284243-kiosk50.md",
+      "total_sections": 20,
+      "headers": {
+        "h1": 1,
+        "h2": 5,
+        "h3": 5,
+        "h4": 8,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 1,
+        "max": 353,
+        "average": 78.9
+      }
+    },
+    {
+      "file_name": "18986181635859-how-to-share-contents-with-other-usersteams.md",
+      "total_sections": 4,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 1,
+        "h4": 1,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 140,
+        "average": 69.0
+      }
+    },
+    {
+      "file_name": "17604055961747-how-to-create-a-content-library-kiosk.md",
+      "total_sections": 8,
+      "headers": {
+        "h1": 1,
+        "h2": 5,
+        "h3": 1,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 639,
+        "average": 136.0
+      }
+    },
+    {
+      "file_name": "1500004699122-android-tv-chromecast.md",
+      "total_sections": 5,
+      "headers": {
+        "h1": 1,
+        "h2": 3,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 25,
+        "max": 169,
+        "average": 65.2
+      }
+    },
+    {
+      "file_name": "1500009382101-installupdate-optisigns-player-on-rpi-via-script.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 28,
+        "max": 71,
+        "average": 49.5
+      }
+    },
+    {
+      "file_name": "360016254994-how-to-add-use-vimeo-video-with-optisigns.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 30,
+        "max": 135,
+        "average": 82.5
+      }
+    },
+    {
+      "file_name": "30310366838803-enabling-lock-down-mode-on-touch-screen-devices.md",
+      "total_sections": 21,
+      "headers": {
+        "h1": 1,
+        "h2": 11,
+        "h3": 3,
+        "h4": 5,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 142,
+        "average": 52.76190476190476
+      }
+    },
+    {
+      "file_name": "1500006056101-multi-select-assets-in-filesassets-view.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 26,
+        "max": 130,
+        "average": 78.0
+      }
+    },
+    {
+      "file_name": "1500002042241-how-to-use-hdmi-other-video-input-sources-in-with-optisigns.md",
+      "total_sections": 5,
+      "headers": {
+        "h1": 1,
+        "h2": 1,
+        "h3": 2,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 23,
+        "max": 136,
+        "average": 64.2
+      }
+    },
+    {
+      "file_name": "1500002383502-how-to-install-optisigns-as-screensaver-on-roku.md",
+      "total_sections": 4,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 2,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 31,
+        "max": 152,
+        "average": 73.0
+      }
+    },
+    {
+      "file_name": "40736654972563-optisigns-propromax-player-troubleshooting-guide.md",
+      "total_sections": 18,
+      "headers": {
+        "h1": 1,
+        "h2": 5,
+        "h3": 11,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 324,
+        "average": 90.05555555555556
+      }
+    },
+    {
+      "file_name": "360035815114-how-to-use-embed-app.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 26,
+        "max": 168,
+        "average": 97.0
+      }
+    },
+    {
+      "file_name": "360037391854-how-to-display-content-inside-websites-that-require-login.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 30,
+        "max": 231,
+        "average": 130.5
+      }
+    },
+    {
+      "file_name": "15861880059283-silent-installation-process-for-optisigns-player-on-windows.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 29,
+        "max": 159,
+        "average": 94.0
+      }
+    },
+    {
+      "file_name": "360052827713-how-to-use-the-flash-message-app.md",
+      "total_sections": 6,
+      "headers": {
+        "h1": 1,
+        "h2": 3,
+        "h3": 1,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 614,
+        "average": 142.33333333333334
+      }
+    },
+    {
+      "file_name": "360016253694-is-there-storage-limit-for-my-account.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 28,
+        "max": 38,
+        "average": 33.0
+      }
+    },
+    {
+      "file_name": "4414496579475-lg-webos-signage-commercial-grade.md",
+      "total_sections": 9,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 7,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 26,
+        "max": 220,
+        "average": 104.66666666666667
+      }
+    },
+    {
+      "file_name": "8399990754195-how-to-display-smartsheet-report-on-optisigns.md",
+      "total_sections": 4,
+      "headers": {
+        "h1": 1,
+        "h2": 1,
+        "h3": 1,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 28,
+        "max": 198,
+        "average": 86.25
+      }
+    },
+    {
+      "file_name": "1500005889381-how-to-use-the-mindmeister-app.md",
+      "total_sections": 4,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 2,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 27,
+        "max": 167,
+        "average": 76.0
+      }
+    },
+    {
+      "file_name": "360019517953-how-to-use-google-calendar-with-optisigns.md",
+      "total_sections": 7,
+      "headers": {
+        "h1": 1,
+        "h2": 2,
+        "h3": 3,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 260,
+        "average": 110.71428571428571
+      }
+    },
+    {
+      "file_name": "36558469962643-subscription-function-in-graphql.md",
+      "total_sections": 4,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 2,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 25,
+        "max": 85,
+        "average": 66.75
+      }
+    },
+    {
+      "file_name": "16364134190355-how-to-use-streaming-app-with-optisigns.md",
+      "total_sections": 4,
+      "headers": {
+        "h1": 1,
+        "h2": 2,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 13,
+        "max": 144,
+        "average": 63.25
+      }
+    },
+    {
+      "file_name": "40212027797523-disk-encryption.md",
+      "total_sections": 7,
+      "headers": {
+        "h1": 1,
+        "h2": 3,
+        "h3": 2,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 183,
+        "average": 62.42857142857143
+      }
+    },
+    {
+      "file_name": "6636047009427-how-to-install-optisigns-player-on-apple-tv.md",
+      "total_sections": 6,
+      "headers": {
+        "h1": 1,
+        "h2": 3,
+        "h3": 0,
+        "h4": 1,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 8,
+        "max": 117,
+        "average": 54.333333333333336
+      }
+    },
+    {
+      "file_name": "29838866920211-how-to-add-google-sheets-as-a-datasource-for-optisync.md",
+      "total_sections": 6,
+      "headers": {
+        "h1": 1,
+        "h2": 2,
+        "h3": 0,
+        "h4": 2,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 419,
+        "average": 84.0
+      }
+    },
+    {
+      "file_name": "360060919453-how-to-put-zendesk-dashboard-on-your-signs.md",
+      "total_sections": 4,
+      "headers": {
+        "h1": 1,
+        "h2": 2,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 14,
+        "max": 126,
+        "average": 65.75
+      }
+    },
+    {
+      "file_name": "360019710493-how-to-display-google-slide-in-portrait-mode.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 29,
+        "max": 110,
+        "average": 69.5
+      }
+    },
+    {
+      "file_name": "8369526604435-how-to-use-the-video-stream-app.md",
+      "total_sections": 5,
+      "headers": {
+        "h1": 1,
+        "h2": 1,
+        "h3": 1,
+        "h4": 1,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 89,
+        "average": 39.4
+      }
+    },
+    {
+      "file_name": "27070013297427-display-device-info-onscreen.md",
+      "total_sections": 8,
+      "headers": {
+        "h1": 1,
+        "h2": 4,
+        "h3": 2,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 162,
+        "average": 95.0
+      }
+    },
+    {
+      "file_name": "10159088954387-how-to-put-live-tv-on-your-screens-with-optisigns.md",
+      "total_sections": 3,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 1,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 23,
+        "max": 595,
+        "average": 216.33333333333334
+      }
+    },
+    {
+      "file_name": "360022393473-how-to-use-the-news-app.md",
+      "total_sections": 6,
+      "headers": {
+        "h1": 1,
+        "h2": 3,
+        "h3": 1,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 292,
+        "average": 77.16666666666667
+      }
+    },
+    {
+      "file_name": "360059386254-how-to-use-youtube-playlist-with-optisigns.md",
+      "total_sections": 4,
+      "headers": {
+        "h1": 1,
+        "h2": 2,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 28,
+        "max": 137,
+        "average": 69.75
+      }
+    },
+    {
+      "file_name": "4404151402899-how-to-use-optisigns-template-designer-to-make-your-digital-signs-in-minutes.md",
+      "total_sections": 11,
+      "headers": {
+        "h1": 2,
+        "h2": 8,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 146,
+        "average": 79.45454545454545
+      }
+    },
+    {
+      "file_name": "360050602413-how-to-use-overlay-layers-with-optisigns.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 28,
+        "max": 207,
+        "average": 117.5
+      }
+    },
+    {
+      "file_name": "51343184586643-connect-cisco-webex-rooms-to-optisigns-digital-signage.md",
+      "total_sections": 15,
+      "headers": {
+        "h1": 1,
+        "h2": 13,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 11,
+        "max": 185,
+        "average": 81.86666666666666
+      }
+    },
+    {
+      "file_name": "360044619014-how-to-use-the-facebook-counter-app.md",
+      "total_sections": 6,
+      "headers": {
+        "h1": 1,
+        "h2": 3,
+        "h3": 1,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 23,
+        "max": 341,
+        "average": 98.33333333333333
+      }
+    },
+    {
+      "file_name": "360055080914-how-to-use-usb-hub-adaptor-connect-to-your-fire-stick.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 32,
+        "max": 150,
+        "average": 91.0
+      }
+    },
+    {
+      "file_name": "42526907045651-photos-gifs-and-qr-codes-in-designer.md",
+      "total_sections": 21,
+      "headers": {
+        "h1": 1,
+        "h2": 4,
+        "h3": 15,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 466,
+        "average": 109.19047619047619
+      }
+    },
+    {
+      "file_name": "360056655633-how-to-change-time-zone-on-your-raspberry-pi-device.md",
+      "total_sections": 3,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 1,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 31,
+        "max": 122,
+        "average": 68.33333333333333
+      }
+    },
+    {
+      "file_name": "44652521310099-kiosk10.md",
+      "total_sections": 16,
+      "headers": {
+        "h1": 1,
+        "h2": 4,
+        "h3": 6,
+        "h4": 4,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 1,
+        "max": 361,
+        "average": 85.5
+      }
+    },
+    {
+      "file_name": "42307234534547-shapes-and-elements.md",
+      "total_sections": 15,
+      "headers": {
+        "h1": 1,
+        "h2": 2,
+        "h3": 10,
+        "h4": 1,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 442,
+        "average": 118.6
+      }
+    },
+    {
+      "file_name": "360038992973-video-codec-or-video-playback-issues.md",
+      "total_sections": 4,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 2,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 27,
+        "max": 182,
+        "average": 113.25
+      }
+    },
+    {
+      "file_name": "1500005467601-clean-install-of-optisigns-player-on-windows.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 28,
+        "max": 127,
+        "average": 77.5
+      }
+    },
+    {
+      "file_name": "52523606879251-optisigns-digital-signage-app-for-zoom-adding-using-and-removing-the-app.md",
+      "total_sections": 11,
+      "headers": {
+        "h1": 1,
+        "h2": 9,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 339,
+        "average": 112.81818181818181
+      }
+    },
+    {
+      "file_name": "19589190970771-how-to-use-secured-dashboard-app.md",
+      "total_sections": 4,
+      "headers": {
+        "h1": 1,
+        "h2": 2,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 23,
+        "max": 351,
+        "average": 159.5
+      }
+    },
+    {
+      "file_name": "4404590815635-how-to-set-up-saml-20-with-optisigns-and-okta.md",
+      "total_sections": 6,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 2,
+        "h4": 2,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 31,
+        "max": 502,
+        "average": 190.83333333333334
+      }
+    },
+    {
+      "file_name": "20062273670163-how-to-control-and-schedule-playlist-items.md",
+      "total_sections": 3,
+      "headers": {
+        "h1": 1,
+        "h2": 1,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 28,
+        "max": 225,
+        "average": 151.66666666666666
+      }
+    },
+    {
+      "file_name": "13320135306515-build-integration-using-optisigns-enterprise-app.md",
+      "total_sections": 6,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 1,
+        "h4": 3,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 27,
+        "max": 262,
+        "average": 150.66666666666666
+      }
+    },
+    {
+      "file_name": "1500002233221-how-to-use-asana-app.md",
+      "total_sections": 2,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 26,
+        "max": 128,
+        "average": 77.0
+      }
+    },
+    {
+      "file_name": "360040991474-how-to-use-the-espn-news-app.md",
+      "total_sections": 6,
+      "headers": {
+        "h1": 1,
+        "h2": 3,
+        "h3": 1,
+        "h4": 0,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 0,
+        "max": 255,
+        "average": 70.83333333333333
+      }
+    },
+    {
+      "file_name": "4414563863827-get-started-with-optisigns-api.md",
+      "total_sections": 5,
+      "headers": {
+        "h1": 1,
+        "h2": 0,
+        "h3": 0,
+        "h4": 3,
+        "h5": 0,
+        "h6": 0
+      },
+      "section_word_counts": {
+        "min": 26,
+        "max": 76,
+        "average": 46.8
+      }
+    }
+  ]
+}
