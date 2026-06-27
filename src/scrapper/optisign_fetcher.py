@@ -18,20 +18,15 @@ def _attempt_fetch_json(url: str, context: ssl.SSLContext, attempt: int) -> tupl
         })
         with urllib.request.urlopen(req, timeout=30, context=context) as resp:
             return True, json.loads(resp.read().decode("utf-8"))
-    except urllib.error.HTTPError as exc:
-        if exc.code == 429:
+    except Exception as exc:
+        if isinstance(exc, urllib.error.HTTPError) and exc.code == 429:
             retry_after = int(exc.headers.get("Retry-After", config.RETRY_DELAY))
             print(f"  ⏳ Rate-limited. Waiting {retry_after}s…")
             time.sleep(retry_after)
             return False, None
+            
         if attempt < config.MAX_RETRIES:
-            print(f"  ⚠ HTTP {exc.code} — retrying ({attempt}/{config.MAX_RETRIES})…")
-            time.sleep(config.RETRY_DELAY)
-            return False, None
-        raise
-    except (urllib.error.URLError, TimeoutError) as exc:
-        if attempt < config.MAX_RETRIES:
-            print(f"  ⚠ Network error — retrying ({attempt}/{config.MAX_RETRIES})…")
+            print(f"  ⚠ Fetch error: {exc} — retrying ({attempt}/{config.MAX_RETRIES})…")
             time.sleep(config.RETRY_DELAY)
             return False, None
         raise
@@ -54,7 +49,7 @@ class OptisignFetcher(Fetcher):
 
     def get_articles(self) -> Iterator[Dict[str, Any]]:
         """Yield all articles from Zendesk API."""
-        url: str | None = f"{config.BASE_URL}?per_page={config.PER_PAGE}"
+        url = f"{config.BASE_URL}?per_page={config.PER_PAGE}"
         page = 0
 
         while url:

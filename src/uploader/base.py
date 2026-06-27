@@ -1,8 +1,9 @@
 import json
 from abc import ABC, abstractmethod
-from typing import Union, List, Dict, Tuple, Optional
+from typing import Union, Optional
 from pathlib import Path
 from src import config
+from src.enums import SyncStatus
 
 class Uploader(ABC):
     def upload(self, stage_file: Union[Path, str]) -> None:
@@ -26,15 +27,15 @@ class Uploader(ABC):
 
             filepath = config.ARTICLES_DIR / filename
             
-            if status == "New":
+            if status == SyncStatus.NEW:
                 if not filepath.exists():
                     continue
                 new_id = self.execute_new(filename)
                 if new_id:
-                    stage_data[filename] = {"status": "Synced", "file_id": new_id}
+                    stage_data[filename] = {"status": SyncStatus.SYNCED, "file_id": new_id}
                     stage_updated = True
                     
-            elif status == "Modified":
+            elif status == SyncStatus.MODIFIED:
                 if not filepath.exists():
                     continue
                 if file_id:
@@ -43,10 +44,10 @@ class Uploader(ABC):
                     new_id = self.execute_new(filename)
                 
                 if new_id:
-                    stage_data[filename] = {"status": "Synced", "file_id": new_id}
+                    stage_data[filename] = {"status": SyncStatus.SYNCED, "file_id": new_id}
                     stage_updated = True
                     
-            elif status == "Deleted":
+            elif status == SyncStatus.DELETED:
                 if file_id:
                     success = self.execute_delete(filename, file_id)
                 else:

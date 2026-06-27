@@ -1,6 +1,7 @@
 import unittest
 from unittest.mock import patch, MagicMock, mock_open
 from src.uploader.openai_uploader import OpenAIUploader
+from src.enums import SyncStatus
 import sys
 import json
 from pathlib import Path
@@ -65,7 +66,7 @@ class TestOpenAIUploader(unittest.TestCase):
         mock_base_config.ARTICLES_DIR.__truediv__.return_value = mock_filepath
         mock_config.ARTICLES_DIR.__truediv__.return_value = mock_filepath
         
-        stage_data = {"new.md": {"status": "New"}}
+        stage_data = {"new.md": {"status": SyncStatus.NEW}}
         
         mock_file_resp = MagicMock()
         mock_file_resp.id = "file_new"
@@ -114,8 +115,8 @@ class TestOpenAIUploader(unittest.TestCase):
         mock_config.ARTICLES_DIR.__truediv__.return_value = mock_filepath
         
         stage_data = {
-            "mod.md": {"status": "Modified", "file_id": "file_mod"}, 
-            "del.md": {"status": "Deleted", "file_id": "file_del"}
+            "mod.md": {"status": SyncStatus.MODIFIED, "file_id": "file_mod"}, 
+            "del.md": {"status": SyncStatus.DELETED, "file_id": "file_del"}
         }
         
         mock_file_resp = MagicMock()
@@ -164,7 +165,7 @@ class TestOpenAIUploader(unittest.TestCase):
         mock_base_config.ARTICLES_DIR.__truediv__.return_value = mock_filepath
         mock_config.ARTICLES_DIR.__truediv__.return_value = mock_filepath
         
-        stage_data = {"new.md": {"status": "New"}}
+        stage_data = {"new.md": {"status": SyncStatus.NEW}}
         
         mock_file_resp = MagicMock()
         mock_file_resp.id = "file_new"

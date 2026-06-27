@@ -5,6 +5,7 @@ from typing import Iterator, Dict, Any
 from pathlib import Path
 from src import config
 from src.utils.parser import html_to_markdown
+from src.enums import SyncStatus
 
 class Fetcher(ABC):
     """Abstract base class for all article fetchers."""
@@ -64,24 +65,23 @@ class Fetcher(ABC):
 
         return "\n".join(lines)
 
-    def _get_article_status(self, filepath: Path, article: dict, filename: str, stage_data: dict) -> str:
+    def _get_article_status(self, filepath: Path, article: dict, filename: str, stage_data: dict) -> SyncStatus:
         """Determine if an article is New, Modified, or Unchanged."""
         if not filepath.exists():
-            return "New"
+            return SyncStatus.NEW
         
         existing_content = filepath.read_text(encoding="utf-8")
         match = re.search(r"^updated_at:\s*(.*)$", existing_content, re.MULTILINE)
-        if match:
-            existing_updated_at = match.group(1).strip()
-            new_updated_at = str(article.get('updated_at', '')).strip()
-            if existing_updated_at == new_updated_at:
-                info = stage_data.get(filename)
-                if isinstance(info, dict):
-                    return info.get("status", "Uploaded")
-                elif isinstance(info, str):
-                    return info
-                return "Uploaded"
-        return "Modified"
+        if not match:
+            return SyncStatus.MODIFIED
+            
+        existing_updated_at = match.group(1).strip()
+        new_updated_at = str(article.get('updated_at', '')).strip()
+        
+        if existing_updated_at != new_updated_at:
+            return SyncStatus.MODIFIED
+            
+        return stage_data[filename]["status"]
 
     def _delete_file_safe(self, deleted_filepath: Path, deleted_filename: str):
         try:
@@ -93,9 +93,9 @@ class Fetcher(ABC):
     def _handle_deleted_files(self, existing_files: set, stage_data: dict, stats: dict):
         """Remove leftover files and update stage data."""
         for deleted_filename in existing_files:
-            if deleted_filename not in stage_data or not isinstance(stage_data[deleted_filename], dict):
+            if deleted_filename not in stage_data:
                 stage_data[deleted_filename] = {}
-            stage_data[deleted_filename]["status"] = "Deleted"
+            stage_data[deleted_filename]["status"] = SyncStatus.DELETED
             
             stats["total_deleted"] += 1
             deleted_filepath = config.ARTICLES_DIR / deleted_filename
@@ -128,26 +128,26 @@ class Fetcher(ABC):
             
             status = self._get_article_status(filepath, article, filename, stage_data)
 
-            if status in ("New", "Modified"):
+            if status in (SyncStatus.NEW, SyncStatus.MODIFIED):
                 md_content = self._article_to_markdown(article)
                 filepath.write_text(md_content, encoding="utf-8")
 
-            if filename not in stage_data or not isinstance(stage_data[filename], dict):
+            if filename not in stage_data:
                 stage_data[filename] = {}
             stage_data[filename]["status"] = status
             
             existing_files.discard(filename)
 
-            if status == "New":
+            if status == SyncStatus.NEW:
                 stats["total_added"] += 1
                 print(f"  [New] {filename}")
-            elif status == "Modified":
+            elif status == SyncStatus.MODIFIED:
                 stats["total_updated"] += 1
                 print(f"  [Modified] {filename}")
-            elif status == "Uploaded":
+            elif status == SyncStatus.UPLOADED:
                 stats["total_skipped"] += 1
                 print(f"  [Uploaded] {filename}")
-            elif status == "Synced":
+            elif status == SyncStatus.SYNCED:
                 stats["total_synced"] += 1
                 print(f"  [Synced] {filename}")
 

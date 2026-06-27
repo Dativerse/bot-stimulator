@@ -1,5 +1,5 @@
 import unittest
-from unittest.mock import patch, MagicMock
+from unittest.mock import patch, MagicMock, ANY
 from src.scheduler.runner import start_cron_job
 
 class TestRunner(unittest.TestCase):
@@ -20,7 +20,7 @@ class TestRunner(unittest.TestCase):
         mock_cron_trigger.assert_called_once_with("0 0 * * *")
         
         mock_scheduler_instance.add_job.assert_called_once_with(
-            dummy_func, mock_trigger_instance, id="test-id", replace_existing=False
+            dummy_func, mock_trigger_instance, id="test-id", replace_existing=False, next_run_time=ANY
         )
         mock_scheduler_instance.start.assert_called_once()
         

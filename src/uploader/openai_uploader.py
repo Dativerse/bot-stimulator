@@ -1,7 +1,5 @@
 import sys
-import time
-from typing import Dict, Union, List, Tuple, Optional
-from pathlib import Path
+from typing import Optional
 from openai import OpenAI
 from src import config
 from .base import Uploader
@@ -73,11 +71,7 @@ class OpenAIUploader(Uploader):
 
     def execute_update(self, filename: str, file_id: str) -> Optional[str]:
         print(f"Updating {filename} (deleting old file_id: {file_id})...")
-        try:
-            self.client.files.delete(file_id)
-        except Exception as e:
-            print(f"  Warning: failed to delete old file_id {file_id}: {e}")
-            
+        self.execute_delete(filename, file_id)
         return self.execute_new(filename)
 
     def execute_delete(self, filename: str, file_id: str) -> bool:

@@ -15,7 +15,7 @@ BASE_URL = "https://optisignshelp.zendesk.com/api/v2/help_center/en-us/articles"
 PER_PAGE = 100
 RATE_LIMIT_PAUSE = 1  # seconds
 MAX_RETRIES = 3
-RETRY_DELAY = 5  # seconds
+RETRY_DELAY = 3600  # seconds
 
 # OpenAI Configuration
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
