@@ -13,8 +13,8 @@ This document maps the project's core requirements to the implemented architectu
 **Goal**: Upload Markdown files to OpenAI Vector Store via API. Explain chunking strategy.
 
 ### Approach & Rationale
-- **Chunking Strategy - `auto` over `static`**: The `OpenAIUploader` relies on OpenAI's `auto` chunking strategy for the Vector Store.
-  - *Why?* Because we explicitly pre-processed the messy HTML into well-structured Markdown, OpenAI's `auto` strategy can leverage semantic markers (`# Headers`, paragraphs) to chunk the document intelligently. A static token count would arbitrarily slice sentences in half, destroying context. The engineering effort was placed on *data preparation* (clean Markdown) rather than *re-inventing chunking algorithms*.
+- **Static Chunking Strategy**: The `OpenAIUploader` relies on OpenAI's `static` chunking strategy for the Vector Store.
+  - *Why?* Base on summary metadata from `section_metadata_stats.json`, we know that 99% of all header-separated sections are under ~750 tokens. By setting a precise `max_tokens_per_chunk` (1000) and a sufficient `chunk_overlap_tokens` (200), we ensure that each chunk maintains semantic coherence, even if it means not fully utilizing the `auto` strategy's ability to detect semantic boundaries.
 
 ## Requirement 3: Deploy as Daily Job & Delta Sync
 **Goal**: Wrap in `main.py`, Dockerize, schedule daily, upload only deltas (new/updated), log counts.

@@ -39,13 +39,13 @@ def fetch_json(url: str) -> dict:
         if success:
             return data
 
-@register_fetcher("optic", "optisign")
+@register_fetcher("opti", "optisign")
 class OptisignFetcher(Fetcher):
     """Fetcher implementation for Zendesk Optisign articles."""
     
     def __init__(self):
         super().__init__()
-        self.provider = "optic"
+        self.provider = "opti"
 
     def get_articles(self) -> Iterator[Dict[str, Any]]:
         """Yield all articles from Zendesk API."""

@@ -19,7 +19,7 @@ class TestMain(unittest.TestCase):
 
         run_sync()
 
-        mock_create_fetcher.assert_called_once_with("optic")
+        mock_create_fetcher.assert_called_once_with("opti")
         mock_fetcher.fetch_or_update.assert_called_once()
         mock_create_uploader.assert_called_once_with("openai")
         mock_uploader.upload.assert_called_once_with(mock_stage_file)
@@ -34,7 +34,7 @@ class TestMain(unittest.TestCase):
 
         main()
 
-        mock_create_fetcher.assert_called_once_with("optic")
+        mock_create_fetcher.assert_called_once_with("opti")
         mock_fetcher.fetch_or_update.assert_called_once()
 
     @patch('main.run_sync')

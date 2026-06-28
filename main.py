@@ -11,7 +11,7 @@ from src.config import CRON_SCHEDULE
 def run_sync():
     """Fetch articles and immediately upload them to OpenAI."""
     print("Starting sync task...")
-    fetcher = create_fetcher("optic")
+    fetcher = create_fetcher("opti")
     stage_file = fetcher.fetch_or_update()
     
     uploader = create_uploader("openai")
@@ -34,7 +34,7 @@ def main():
     args = parser.parse_args()
 
     if args.command == "fetch":
-        fetcher = create_fetcher("optic")
+        fetcher = create_fetcher("opti")
         fetcher.fetch_or_update()
     elif args.command == "sync":
         run_sync()
