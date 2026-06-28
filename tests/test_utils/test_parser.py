@@ -43,3 +43,10 @@ class TestParser(unittest.TestCase):
         html = "<p>Line 1</p>\n\n\n\n\n<p>Line 2</p>"
         md = html_to_markdown(html)
         self.assertEqual(md, "Line 1\n\nLine 2\n")
+
+    def test_html_to_markdown_removes_base64_images(self):
+        html = "<div><p>Content</p><img src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH5QgKCg0NDQ0NDQAAAA' /><img src='https://example.com/normal.png' /></div>"
+        md = html_to_markdown(html)
+        self.assertIn("![](https://example.com/normal.png)", md)
+        self.assertNotIn("data:image", md)
+

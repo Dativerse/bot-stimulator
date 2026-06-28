@@ -57,12 +57,7 @@ The application provides a CLI with the following commands:
   ```bash
   python main.py fetch
   ```
-
-- **Upload local articles to OpenAI Vector Store:**
-  ```bash
-  python main.py upload
-  ```
-
+  
 - **Sync (Fetch and immediately Upload):**
   ```bash
   python main.py sync
@@ -81,12 +76,19 @@ The application provides a CLI with the following commands:
    ```
 
 2. **Run the container (example running sync task):**
+   ```bash
    docker run --rm --env-file .env bot-stimulator python main.py sync
    ```
+3. **Altternative**
+   ```bash
+   docker run --rm -e OPENAI_API_KEY=[KEY] bot-stimulator python main.py
+   ```
+
 
 ## OpenAI Chunking Strategy
 
 This project utilizes a **Static Chunking Strategy** with a maximum size of `1000` tokens and an overlap of `200` tokens when uploading articles to the Vector Store.
+* During HTML-to-Markdown parsing, any image tags containing embedded base64 data URIs (`data:image/png;base64,...`) are completely stripped. This avoids indexing massive raw text blocks, saving prompt tokens and improving embedding semantic precision.
 
 **Why Static (1000 Tokens)?**
 - Based on our metadata analysis of over 400 articles, the content is highly structured using Markdown headers (`#`, `##`, `###`).

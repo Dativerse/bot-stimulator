@@ -3,6 +3,10 @@ import tempfile
 import sys
 from io import StringIO
 from pathlib import Path
+
+# Add project root to sys.path so we can import src
+sys.path.append(str(Path(__file__).resolve().parent.parent))
+
 from typing import Iterator, Dict, Any, Optional
 
 from src import config

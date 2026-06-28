@@ -14,6 +14,12 @@ def html_to_markdown(html: str) -> str:
             element.decompose()
             continue
             
+        if element.name == "img":
+            src = element.get("src", "")
+            if isinstance(src, str) and src.startswith("data:image/"):
+                element.decompose()
+                continue
+            
         classes = element.get("class", [])
         if isinstance(classes, str):
             classes = [classes]
